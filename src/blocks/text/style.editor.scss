@@ -1,0 +1,11 @@
+.editor-styles-wrapper .wp-block[data-type="tw-blocks/title"] {
+     [data-block] {
+        margin-top: 0;
+        margin-bottom: 0; 
+        [role="textbox"]{
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        
+    }
+}
