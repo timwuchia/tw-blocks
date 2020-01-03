@@ -8,17 +8,25 @@ const attributes = {
     text: {
         type: 'string',
         source: 'html',
-        selector: 'a'
+        selector: 'a',
+        default: ''
     },
     url: {
         type: 'string',
         selector: 'a',
         source: 'attribute',
-        attribute: 'href'
+        attribute: 'href',
+        default: ''
     },
     target: {
         type: 'boolean',
         default: false
+    },
+    buttonClass: {
+        type: '',
+        selector: 'a',
+        source: 'attribute',
+        attribute: 'class' 
     }
 }
 

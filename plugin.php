@@ -84,6 +84,8 @@
     tw_blocks_register_block_type('button');
     tw_blocks_register_block_type('title');
     tw_blocks_register_block_type('flexible-content');
+    tw_blocks_register_block_type('grid');
+    tw_blocks_register_block_type('image');
 
  };
 

@@ -6,24 +6,47 @@ import { InspectorControls } from '@wordpress/editor';
 import { PanelBody, SelectControl } from '@wordpress/components';
 
 
-// Enable spacing controls on the following blocks
-const enableSpacingControlOnBlocks = [
+// Enable style controls on the following blocks
+const enableStyleControlOnBlocks = [
     'tw-blocks/text',
     'core/image'
 ]
 
-// const spacingClasses = {
-//     pt: ['pt-0', 'pt-1', 'pt-2', 'pt-3', 'pt-4', 'pt-5'],
-//     pb: ['pb-0', 'pb-1', 'pb-2', 'pb-3', 'pb-4', 'pb-5'],
-//     pl: ['pl-0', 'pl-1', 'pl-2', 'pl-3', 'pl-4', 'pl-5'],
-//     pr: ['pr-0', 'pr-1', 'pr-2', 'pr-3', 'pr-4', 'pr-5'],
-//     mt: ['mt-0', 'mt-1', 'mt-2', 'mt-3', 'mt-4', 'mt-5'],
-//     mb: ['mb-0', 'mb-1', 'mb-2', 'mb-3', 'mb-4', 'mb-5'],
-//     ml: ['ml-0', 'ml-1', 'ml-2', 'ml-3', 'ml-4', 'ml-5'],
-//     mr: ['mr-0', 'mr-1', 'mr-2', 'mr-3', 'mr-4', 'mr-5']
-// }
-
 //Available options
+const containerControlOptions=[
+    { 
+        label: __( 'Container', 'tw-blocks' ),
+        value: 'container',
+    },
+    {
+        label: __( 'Container Fluid', 'tw-blocks' ),
+        value: 'container-fluid',
+    }
+];
+
+const backgroundColorOptions=[
+    {
+        label:__( 'None', 'tw-blocks' ),
+        value: null
+    },
+    {
+        label: __( 'Primary', 'tw-blocks' ),
+        value: 'bg-primary'
+    },
+    {
+        label: __( 'Secondary', 'tw-blocks' ),
+        value: 'bg-secondary'
+    },
+    {
+        label: __( 'Light', 'tw-blocks' ),
+        value: 'bg-light'
+    },
+    {
+        label: __( 'Dark', 'tw-blocks' ),
+        value: 'bg-dark'
+    }
+]
+
 const spacingControlOptions = [
     {
         label: __( 'None', 'tw-blocks' ),
@@ -52,16 +75,16 @@ const spacingControlOptions = [
 ];
 
 /**
- * Add spacing control attribute to block.
+ * Add style control attribute to block.
  *
  * @param {object} settings Current block settings.
  * @param {string} name Name of block.
  *
  * @returns {object} Modified block settings.
  */
-const addSpacingControlAttribute = ( settings, name ) => {
-    // Do nothing if it's another block than our defined ones.
-    if ( ! enableSpacingControlOnBlocks.includes( name ) ) {
+const addStyleControlAttribute = ( settings, name ) => {
+    // Do nothing if it's another block than our defined ones
+    if ( ! enableStyleControlOnBlocks.includes( name ) ) {
         return settings;
     }
 
@@ -99,16 +122,14 @@ const addSpacingControlAttribute = ( settings, name ) => {
             type: 'number',
             default: spacingControlOptions[0].value
         },
-        // className: {
-        //     pt: '',
-        //     pb: '',
-        //     pl: '',
-        //     pr: '',
-        //     mt: '',
-        //     mb: '',
-        //     ml: '',
-        //     mr: '',
-        // }
+        container: {
+            type: 'string',
+            default: containerControlOptions[0].value
+        },
+        backgroundColor: {
+            type: 'string',
+            default: backgroundColorOptions[0].value
+        }
     } );
 
     return settings;
@@ -117,56 +138,66 @@ const addSpacingControlAttribute = ( settings, name ) => {
 
 addFilter( 
     'blocks.registerBlockType', 
-    'tw-blocks/attribute/spacing', 
-    addSpacingControlAttribute 
+    'tw-blocks/attribute/style', 
+    addStyleControlAttribute 
 );
 
 /**
- * Create HOC to add spacing control to inspector controls of block.
+ * Create HOC to add style control to inspector controls of block.
  */
 
-export const withSpacingControl = createHigherOrderComponent( ( BlockEdit ) => {
+const withStyleControl = createHigherOrderComponent( ( BlockEdit ) => {
     return ( props ) => {
         // Do nothing if it's another block than our defined ones.
-        if ( ! enableSpacingControlOnBlocks.includes( props.name ) ) {
+        if ( ! enableStyleControlOnBlocks.includes( props.name ) ) {
             return (
                 <BlockEdit { ...props } />
             );
         }
 
-        const { paddingTop, paddingBottom, paddingLeft, paddingRight, marginTop, marginBottom, marginLeft, marginRight, className } = props.attributes;
-
-        // generating the classes
-        if ( paddingTop ) {
-            props.attributes.className.pt = `pt-${ paddingTop }`;
-        }
-        if ( paddingBottom ) {
-            props.attributes.className.pb = `pb-${ paddingBottom }`;
-        }
-        if ( paddingLeft ) {
-            props.attributes.className.pl = `pl-${ paddingLeft }`;
-        }
-        if ( paddingRight ) {
-            props.attributes.className.pr = `pr-${ paddingRight }`;
-        }
-        if ( marginTop ) {
-            props.attributes.className.mt = `mt-${ marginTop }`;
-        }
-        if ( marginBottom ) {
-            props.attributes.className.mb = `mb-${ marginBottom }`;
-        }
-        if ( marginLeft ) {
-            props.attributes.className.ml = `ml-${ marginLeft }`;
-        }
-        if ( marginRight ) {
-            props.attributes.className.mr = `mr-${ marginRight }`;
-        }
-
-
+        const { paddingTop, paddingBottom, paddingLeft, paddingRight, marginTop, marginBottom, marginLeft, marginRight, container, backgroundColor } = props.attributes;
+        const spacingClasses = `pt-${ paddingTop } pb-${ paddingBottom } pl-${ paddingLeft } pr-${ paddingRight} mt-${ marginTop } mb-${ marginBottom } ml-${ marginLeft } mr-${ marginRight}`;
+        const containerClass=`${container}`;
+        const backgroundColorClass=`${backgroundColor}`;
+        const parentWrapperClasses=[spacingClasses, backgroundColorClass].join(' ')
         return (
             <>
-                <BlockEdit { ...props } />
+                <div className={parentWrapperClasses}>
+                    <div className={containerClass}>
+                        <BlockEdit { ...props } />
+                    </div>
+                </div>
                 <InspectorControls>
+                <PanelBody
+                        title={ __( 'Background' ) }
+                        initialOpen={ true }
+                    >
+                        <SelectControl 
+                            label={ __( 'Background Color' ) }
+                            value={ backgroundColor }
+                            options={ backgroundColorOptions }
+                            onChange={ ( selectedBackgroundColor ) => {
+                                props.setAttributes( {
+                                    backgroundColor: selectedBackgroundColor
+                                } );
+                            } }
+                        />
+                    </PanelBody>
+                    <PanelBody
+                        title={ __( 'Container Control' ) }
+                        initialOpen={ true }
+                    >
+                        <SelectControl 
+                            label={ __( 'Container Type' ) }
+                            value={ container }
+                            options={ containerControlOptions }
+                            onChange={ ( selectedContainerOption ) => {
+                                props.setAttributes( {
+                                    container: selectedContainerOption
+                                } );
+                            } }
+                        />
+                    </PanelBody>
                     <PanelBody
                         title={ __( 'Control Padding' ) }
                         initialOpen={ true }
@@ -177,8 +208,7 @@ export const withSpacingControl = createHigherOrderComponent( ( BlockEdit ) => {
                             options={ spacingControlOptions }
                             onChange={ ( selectedSpacingOption ) => {
                                 props.setAttributes( {
-                                    paddingTop: selectedSpacingOption,
-                                    className: { pt: `pt-${paddingTop}` }
+                                    paddingTop: parseInt( selectedSpacingOption )
                                 } );
                             } }
                         />
@@ -188,7 +218,7 @@ export const withSpacingControl = createHigherOrderComponent( ( BlockEdit ) => {
                             options={ spacingControlOptions }
                             onChange={ ( selectedSpacingOption ) => {
                                 props.setAttributes( {
-                                    paddingBottom: selectedSpacingOption,
+                                    paddingBottom: parseInt( selectedSpacingOption )
                                 } );
                             } }
                         />
@@ -262,12 +292,12 @@ export const withSpacingControl = createHigherOrderComponent( ( BlockEdit ) => {
             </>
         );
     };
-}, 'withSpacingControl' );
+}, 'withStyleControl' );
 
 addFilter( 
     'editor.BlockEdit', 
-    'tw-blocks/with-spacing-control', 
-    withSpacingControl 
+    'tw-blocks/with-style-control', 
+    withStyleControl,  
 );
 
 /**
@@ -279,24 +309,23 @@ addFilter(
  *
  * @returns {object} Modified props of save element.
  */
-// const addSpacingExtraProps = ( saveElementProps, blockType, attributes ) => {
-//     // Do nothing if it's another block than our defined ones.
-//     if ( ! enableSpacingControlOnBlocks.includes( blockType.name ) ) {
-//         return saveElementProps;
-//     }
 
-//     const margins = {
-//         small: '8px',
-//         medium: '15px',
-//         large: '30px',
-//     };
+function saveStyle( element, blockType, attributes  ) {
+	if (!element) {
+		return;
+    }
+    const { paddingBottom, paddingLeft, paddingRight, paddingTop, marginBottom, marginLeft, marginRight, marginTop, container, backgroundColor } = attributes;
+    const spacingClasses = `pt-${ paddingTop } pb-${ paddingBottom } pl-${ paddingLeft } pr-${ paddingRight} mt-${ marginTop } mb-${ marginBottom } ml-${ marginLeft } mr-${ marginRight}`;
+    const containerClass = `${container}`;
+    const backgroundColorClass=`${backgroundColor}`;
+    const parentWrapperClasses=[spacingClasses, backgroundColorClass].join(' ')
+	return (
+        <div className={ parentWrapperClasses }>
+            <div className={containerClass}>
+                { element }
+            </div>
+        </div>
+    );
+}
 
-//     if ( attributes.spacing in margins ) {
-//         // Use Lodash's assign to gracefully handle if attributes are undefined
-//         assign( saveElementProps, { style: { 'margin-bottom': margins[ attributes.spacing ] } } );
-//     }
-
-//     return saveElementProps;
-// };
-
-// addFilter( 'blocks.getSaveContent.extraProps', 'tw-blocks/get-save-content/extra-props', addSpacingExtraProps );
+ addFilter( 'blocks.getSaveElement', 'tw-blocks/get-save-content/save-style', saveStyle );

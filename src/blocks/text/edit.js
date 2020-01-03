@@ -14,7 +14,6 @@ class Edit extends Component {
 
         const { attributes } = this.props;
         const { text } = attributes;
-        console.log(attributes);
 
         return(
             <>
