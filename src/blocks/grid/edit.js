@@ -38,6 +38,7 @@ class Edit extends Component {
                     allowedBlocks={ [
                         'tw-blocks/flexible-content',
                         'tw-blocks/title',
+                        'tw-blocks/image',
                     ] }
                 />
             </div>

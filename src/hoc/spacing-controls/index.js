@@ -9,7 +9,10 @@ import { PanelBody, SelectControl } from '@wordpress/components';
 // Enable style controls on the following blocks
 const enableStyleControlOnBlocks = [
     'tw-blocks/text',
-    'core/image'
+    'tw-blocks/title',
+    'tw-blocks/image',
+    'tw-blocks/flexible-content',
+    'tw-blocks/grid'
 ]
 
 //Available options

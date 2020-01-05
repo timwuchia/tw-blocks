@@ -824,7 +824,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "C:\\MAMP\\htdocs\\tw-blocks\\wp-content\\plugins\\tw-blocks\\src\\blocks\\button\\edit.js";
+var _jsxFileName = "C:\\MAMP\\htdocs\\gutenberg-blocks\\wp-content\\plugins\\tw-blocks\\src\\blocks\\button\\edit.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -1064,7 +1064,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/editor */ "@wordpress/editor");
 /* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "C:\\MAMP\\htdocs\\tw-blocks\\wp-content\\plugins\\tw-blocks\\src\\blocks\\button\\save.js";
+var _jsxFileName = "C:\\MAMP\\htdocs\\gutenberg-blocks\\wp-content\\plugins\\tw-blocks\\src\\blocks\\button\\save.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -1158,7 +1158,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/editor */ "@wordpress/editor");
 /* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "C:\\MAMP\\htdocs\\tw-blocks\\wp-content\\plugins\\tw-blocks\\src\\blocks\\flexible-content\\index.js";
+var _jsxFileName = "C:\\MAMP\\htdocs\\gutenberg-blocks\\wp-content\\plugins\\tw-blocks\\src\\blocks\\flexible-content\\index.js";
 
 
 
@@ -1212,7 +1212,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "C:\\MAMP\\htdocs\\tw-blocks\\wp-content\\plugins\\tw-blocks\\src\\blocks\\grid\\edit.js";
+var _jsxFileName = "C:\\MAMP\\htdocs\\gutenberg-blocks\\wp-content\\plugins\\tw-blocks\\src\\blocks\\grid\\edit.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -1324,7 +1324,7 @@ function (_Component) {
         },
         __self: this
       }))), wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__["InnerBlocks"], {
-        allowedBlocks: ['tw-blocks/flexible-content', 'tw-blocks/title'],
+        allowedBlocks: ['tw-blocks/flexible-content', 'tw-blocks/title', 'tw-blocks/image'],
         __source: {
           fileName: _jsxFileName,
           lineNumber: 37
@@ -1405,7 +1405,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/editor */ "@wordpress/editor");
 /* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "C:\\MAMP\\htdocs\\tw-blocks\\wp-content\\plugins\\tw-blocks\\src\\blocks\\grid\\save.js";
+var _jsxFileName = "C:\\MAMP\\htdocs\\gutenberg-blocks\\wp-content\\plugins\\tw-blocks\\src\\blocks\\grid\\save.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -1501,7 +1501,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__);
-var _jsxFileName = "C:\\MAMP\\htdocs\\tw-blocks\\wp-content\\plugins\\tw-blocks\\src\\blocks\\image\\edit.js";
+var _jsxFileName = "C:\\MAMP\\htdocs\\gutenberg-blocks\\wp-content\\plugins\\tw-blocks\\src\\blocks\\image\\edit.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -1811,7 +1811,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "C:\\MAMP\\htdocs\\tw-blocks\\wp-content\\plugins\\tw-blocks\\src\\blocks\\image\\save.js";
+var _jsxFileName = "C:\\MAMP\\htdocs\\gutenberg-blocks\\wp-content\\plugins\\tw-blocks\\src\\blocks\\image\\save.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -1911,7 +1911,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _hoc_spacing_controls__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../hoc/spacing-controls */ "./src/hoc/spacing-controls/index.js");
-var _jsxFileName = "C:\\MAMP\\htdocs\\tw-blocks\\wp-content\\plugins\\tw-blocks\\src\\blocks\\text\\edit.js";
+var _jsxFileName = "C:\\MAMP\\htdocs\\gutenberg-blocks\\wp-content\\plugins\\tw-blocks\\src\\blocks\\text\\edit.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -2050,7 +2050,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "C:\\MAMP\\htdocs\\tw-blocks\\wp-content\\plugins\\tw-blocks\\src\\blocks\\text\\save.js";
+var _jsxFileName = "C:\\MAMP\\htdocs\\gutenberg-blocks\\wp-content\\plugins\\tw-blocks\\src\\blocks\\text\\save.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -2138,7 +2138,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "C:\\MAMP\\htdocs\\tw-blocks\\wp-content\\plugins\\tw-blocks\\src\\blocks\\title\\edit.js";
+var _jsxFileName = "C:\\MAMP\\htdocs\\gutenberg-blocks\\wp-content\\plugins\\tw-blocks\\src\\blocks\\title\\edit.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -2327,7 +2327,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/editor */ "@wordpress/editor");
 /* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "C:\\MAMP\\htdocs\\tw-blocks\\wp-content\\plugins\\tw-blocks\\src\\blocks\\title\\save.js";
+var _jsxFileName = "C:\\MAMP\\htdocs\\gutenberg-blocks\\wp-content\\plugins\\tw-blocks\\src\\blocks\\title\\save.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -2449,7 +2449,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_editor__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__);
-var _jsxFileName = "C:\\MAMP\\htdocs\\tw-blocks\\wp-content\\plugins\\tw-blocks\\src\\hoc\\spacing-controls\\index.js";
+var _jsxFileName = "C:\\MAMP\\htdocs\\gutenberg-blocks\\wp-content\\plugins\\tw-blocks\\src\\hoc\\spacing-controls\\index.js";
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
@@ -2460,7 +2460,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
  // Enable style controls on the following blocks
 
-var enableStyleControlOnBlocks = ['tw-blocks/text', 'core/image']; //Available options
+var enableStyleControlOnBlocks = ['tw-blocks/text', 'tw-blocks/title', 'tw-blocks/image', 'tw-blocks/flexible-content', 'tw-blocks/grid']; //Available options
 
 var containerControlOptions = [{
   label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Container', 'tw-blocks'),
@@ -2577,7 +2577,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       return wp.element.createElement(BlockEdit, _extends({}, props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 154
+          lineNumber: 157
         },
         __self: this
       }));
@@ -2602,26 +2602,26 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       className: parentWrapperClasses,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 165
+        lineNumber: 168
       },
       __self: this
     }, wp.element.createElement("div", {
       className: containerClass,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 166
+        lineNumber: 169
       },
       __self: this
     }, wp.element.createElement(BlockEdit, _extends({}, props, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 167
+        lineNumber: 170
       },
       __self: this
     })))), wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_4__["InspectorControls"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 170
+        lineNumber: 173
       },
       __self: this
     }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["PanelBody"], {
@@ -2629,7 +2629,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       initialOpen: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 171
+        lineNumber: 174
       },
       __self: this
     }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
@@ -2643,7 +2643,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 175
+        lineNumber: 178
       },
       __self: this
     })), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["PanelBody"], {
@@ -2651,7 +2651,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       initialOpen: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 186
+        lineNumber: 189
       },
       __self: this
     }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
@@ -2665,7 +2665,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 190
+        lineNumber: 193
       },
       __self: this
     })), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["PanelBody"], {
@@ -2673,7 +2673,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       initialOpen: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 201
+        lineNumber: 204
       },
       __self: this
     }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
@@ -2687,7 +2687,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 205
+        lineNumber: 208
       },
       __self: this
     }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
@@ -2701,7 +2701,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 215
+        lineNumber: 218
       },
       __self: this
     }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
@@ -2715,7 +2715,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 225
+        lineNumber: 228
       },
       __self: this
     }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
@@ -2729,7 +2729,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 235
+        lineNumber: 238
       },
       __self: this
     })), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["PanelBody"], {
@@ -2737,7 +2737,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       initialOpen: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 246
+        lineNumber: 249
       },
       __self: this
     }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
@@ -2751,7 +2751,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 250
+        lineNumber: 253
       },
       __self: this
     }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
@@ -2765,7 +2765,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 260
+        lineNumber: 263
       },
       __self: this
     }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
@@ -2779,7 +2779,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 270
+        lineNumber: 273
       },
       __self: this
     }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
@@ -2793,7 +2793,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 280
+        lineNumber: 283
       },
       __self: this
     }))));
@@ -2833,14 +2833,14 @@ function saveStyle(element, blockType, attributes) {
     className: parentWrapperClasses,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 323
+      lineNumber: 326
     },
     __self: this
   }, wp.element.createElement("div", {
     className: containerClass,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 324
+      lineNumber: 327
     },
     __self: this
   }, element));
