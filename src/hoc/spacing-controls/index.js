@@ -2,8 +2,8 @@ import {__} from "@wordpress/i18n";
 import assign from 'lodash.assign';
 import {addFilter} from "@wordpress/hooks";
 import { createHigherOrderComponent } from '@wordpress/compose';
-import { InspectorControls } from '@wordpress/editor';
-import { PanelBody, SelectControl } from '@wordpress/components';
+import { InspectorControls, RichText } from '@wordpress/editor';
+import { PanelBody, SelectControl, TextControl } from '@wordpress/components';
 
 
 // Enable style controls on the following blocks
@@ -132,6 +132,10 @@ const addStyleControlAttribute = ( settings, name ) => {
         backgroundColor: {
             type: 'string',
             default: backgroundColorOptions[0].value
+        },
+        id: {
+            type: 'string',
+            default: ''
         }
     } );
 
@@ -158,7 +162,7 @@ const withStyleControl = createHigherOrderComponent( ( BlockEdit ) => {
             );
         }
 
-        const { paddingTop, paddingBottom, paddingLeft, paddingRight, marginTop, marginBottom, marginLeft, marginRight, container, backgroundColor } = props.attributes;
+        const { paddingTop, paddingBottom, paddingLeft, paddingRight, marginTop, marginBottom, marginLeft, marginRight, container, backgroundColor, id } = props.attributes;
         const spacingClasses = `pt-${ paddingTop } pb-${ paddingBottom } pl-${ paddingLeft } pr-${ paddingRight} mt-${ marginTop } mb-${ marginBottom } ml-${ marginLeft } mr-${ marginRight}`;
         const containerClass=`${container}`;
         const backgroundColorClass=`${backgroundColor}`;
@@ -166,11 +170,22 @@ const withStyleControl = createHigherOrderComponent( ( BlockEdit ) => {
         return (
             <>
                 <div className={parentWrapperClasses}>
-                    <div className={containerClass}>
+                    <div id={id} className={containerClass}>
                         <BlockEdit { ...props } />
                     </div>
                 </div>
                 <InspectorControls>
+                <PanelBody>
+                    <TextControl 
+                        label={__('ID')}
+                        value={ id }
+                        onChange={(id) => {
+                            props.setAttributes({
+                                id
+                            })
+                        } }
+                    />
+                </PanelBody>
                 <PanelBody
                         title={ __( 'Background' ) }
                         initialOpen={ true }
@@ -317,14 +332,14 @@ function saveStyle( element, blockType, attributes  ) {
 	if (!element) {
 		return;
     }
-    const { paddingBottom, paddingLeft, paddingRight, paddingTop, marginBottom, marginLeft, marginRight, marginTop, container, backgroundColor } = attributes;
+    const { paddingBottom, paddingLeft, paddingRight, paddingTop, marginBottom, marginLeft, marginRight, marginTop, container, backgroundColor, id } = attributes;
     const spacingClasses = `pt-${ paddingTop } pb-${ paddingBottom } pl-${ paddingLeft } pr-${ paddingRight} mt-${ marginTop } mb-${ marginBottom } ml-${ marginLeft } mr-${ marginRight}`;
     const containerClass = `${container}`;
     const backgroundColorClass=`${backgroundColor}`;
     const parentWrapperClasses=[spacingClasses, backgroundColorClass].join(' ')
 	return (
         <div className={ parentWrapperClasses }>
-            <div className={containerClass}>
+            <div id={id} className={containerClass}>
                 { element }
             </div>
         </div>
