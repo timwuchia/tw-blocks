@@ -18,6 +18,10 @@ const enableStyleControlOnBlocks = [
 //Available options
 const containerControlOptions=[
     { 
+        label: __( 'None', 'tw-blocks' ),
+        value: '',
+    },
+    { 
         label: __( 'Container', 'tw-blocks' ),
         value: 'container',
     },

@@ -2,7 +2,7 @@
     @mixin grid-layout($columns){
         display: flex;
         flex-wrap: wrap;
-        > * {
+        > div {
             flex: 0 0 calc(#{(1/$columns) * 100%});
         }
     }

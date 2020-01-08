@@ -1,11 +1,13 @@
-.tw-grid {
-
+.wp-block-tw-blocks-grid {
+    &.wp-block-tw-blocks-grid .editor-inner-blocks {
+        flex: 0 0 100%;
+    }
     @mixin grid-layout($columns){
-        .editor-inner-blocks {
-            .editor-block-list__layout {
+        > .editor-inner-blocks {
+            > .editor-block-list__layout {
                 display: flex;
                 flex-wrap: wrap;
-                > * {
+                > div{
                     flex: 0 0 calc(#{(1/$columns) * 100%});
                 }
             } 

@@ -66,6 +66,7 @@ class Edit extends Component {
                         this.onChangeText(text);
                     } }
                 />
+                <i class="fab fa-node-js"></i>
                 <URLInput 
                     label={__('URL', 'tw-blocks')}
                     value={url}
