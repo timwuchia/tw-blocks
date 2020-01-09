@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/alialaa/gutenberg-course-webpack#readme",
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.12.0",
+    "@fortawesome/react-fontawesome": "^0.1.8",
     "@wordpress/blob": "^2.5.1",
     "@wordpress/blocks": "^6.8.0",
     "@wordpress/compose": "^3.9.0",
@@ -25,6 +27,7 @@
     "@wordpress/hooks": "^2.6.0",
     "@wordpress/html-entities": "^2.5.0",
     "@wordpress/i18n": "^3.7.0",
+    "font-awesome": "^4.7.0",
     "jquery": "^3.4.1",
     "lodash.assign": "^4.2.0",
     "popper.js": "^1.16.0",
@@ -47,6 +50,7 @@
     "classnames": "^2.2.6",
     "clean-webpack-plugin": "^2.0.1",
     "css-loader": "^2.1.1",
+    "file-loader": "^5.0.2",
     "gulp": "^4.0.2",
     "gulp-zip": "^5.0.1",
     "lodash": "^4.17.15",
@@ -54,9 +58,11 @@
     "node-sass": "^4.11.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss-loader": "^3.0.0",
+    "resolve-url-loader": "^3.1.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
-    "webpack": "^4.30.0",
+    "url-loader": "^3.0.0",
+    "webpack": "^4.41.5",
     "webpack-cli": "^3.3.0"
   },
   "browserslist": [

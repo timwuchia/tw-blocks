@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css';
+import 'font-awesome/css/font-awesome.min.css';
 import './blocks/reset.scss';
 import './hoc/spacing-controls';
 import './blocks/grid';

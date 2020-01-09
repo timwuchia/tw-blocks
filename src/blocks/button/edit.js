@@ -1,6 +1,6 @@
 import { Component } from '@wordpress/element';
 import { __ } from '@wordpress/i18n';
-import {  InspectorControls, RichText, URLInput } from '@wordpress/editor';
+import {  InspectorControls, RichText, URLInput, BlockControls, AlignmentToolbar } from '@wordpress/editor';
 import { PanelBody, ToggleControl, SelectControl } from '@wordpress/components';
 
 class Edit extends Component {
@@ -66,7 +66,6 @@ class Edit extends Component {
                         this.onChangeText(text);
                     } }
                 />
-                <i class="fab fa-node-js"></i>
                 <URLInput 
                     label={__('URL', 'tw-blocks')}
                     value={url}

@@ -1,6 +1,6 @@
 import { Component } from '@wordpress/element';
 import { __ } from '@wordpress/i18n';
-import { RichText, InspectorControls, PanelColorSettings } from '@wordpress/editor';
+import { RichText, InspectorControls, PanelColorSettings, BlockControls, AlignmentToolbar } from '@wordpress/editor';
 import { PanelBody } from '@wordpress/components';
 import { withSpacingControl } from '../../hoc/spacing-controls'
 
@@ -17,6 +17,11 @@ class Edit extends Component {
 
         return(
             <>
+                <BlockControls>
+                    <AlignmentToolbar
+
+                    />
+                </BlockControls>
                 <RichText
                     tagName='p'
                     onChange = { this.onChangeText }

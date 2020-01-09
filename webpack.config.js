@@ -67,6 +67,25 @@ module.exports =  (env, argv) => {
 					}
 				},
 				{
+					test: /\.(png|jpg|woff|woff2|eot|ttf|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+					use: [
+						{
+						  loader: 'url-loader',
+						  options: {
+							limit: 8192,
+						  },
+						},
+					  ],
+				},
+				{
+					test: /\.(png|jpg|woff|woff2|eot|ttf|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+					use: [
+						{
+						  loader: 'file-loader',
+						},
+					  ],
+				},
+				{
 					test: /\.(sa|sc|c)ss$/,
 					use: [
 						MiniCSSExtractPlugin.loader,
@@ -79,9 +98,14 @@ module.exports =  (env, argv) => {
 								]	
 							}
 						},
-						'sass-loader'
+						{
+							loader: 'resolve-url-loader'
+						},
+						{
+							loader:'sass-loader'
+						}
 					]
-				}
+				},
 			]
 		},
 		externals: {
