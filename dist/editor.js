@@ -1184,7 +1184,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])('tw-
   icon: 'grid-view',
   edit: function edit() {
     return wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__["InnerBlocks"], {
-      allowedBlocks: ['tw-blocks/text', 'tw-blocks/title', 'tw-blocks/button'],
+      allowedBlocks: ['tw-blocks/text', 'tw-blocks/title', 'tw-blocks/button', 'core/shortcode'],
       __source: {
         fileName: _jsxFileName,
         lineNumber: 19
@@ -1197,7 +1197,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])('tw-
     return wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__["InnerBlocks"].Content, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33
+        lineNumber: 34
       },
       __self: this
     }));

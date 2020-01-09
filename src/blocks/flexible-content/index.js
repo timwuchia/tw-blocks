@@ -20,7 +20,8 @@ registerBlockType('tw-blocks/flexible-content', {
                     allowedBlocks={ [
                         'tw-blocks/text',
                         'tw-blocks/title',
-                        'tw-blocks/button'
+                        'tw-blocks/button',
+                        'core/shortcode'
                     ] }
                 />
             </>

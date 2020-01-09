@@ -14195,6 +14195,9 @@ readers do not read off random characters that represent icons */
   max-width: none; }
 
 @media (min-width: 600px) {
+  .block-editor-block-list__block .block-editor-block-list__layout {
+    margin-right: 0;
+    margin-left: 0; }
   .block-editor-block-list__layout .block-editor-block-list__block {
     padding-left: 0;
     padding-right: 0; }
