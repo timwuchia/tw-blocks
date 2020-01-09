@@ -14197,7 +14197,10 @@ readers do not read off random characters that represent icons */
 @media (min-width: 600px) {
   .block-editor-block-list__layout .block-editor-block-list__block {
     padding-left: 0;
-    padding-right: 0; } }
+    padding-right: 0; }
+  .edit-post-visual-editor .block-editor-block-list__block .block-editor-block-list__block-edit {
+    margin-left: 0;
+    margin-right: 0; } }
 
 .wp-block-tw-blocks-grid.wp-block-tw-blocks-grid .editor-inner-blocks {
   flex: 0 0 100%; }
