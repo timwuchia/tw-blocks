@@ -17,7 +17,7 @@ class Edit extends Component {
     }
 
     render(){
-        const { attributes } = this.props;
+        const { attributes, isSelected } = this.props;
         const { text, url, target, buttonClass } = attributes;
         const btnClass= buttonClass ? `btn btn-${buttonClass}` : null;
         const btnOptions=[
@@ -66,13 +66,15 @@ class Edit extends Component {
                         this.onChangeText(text);
                     } }
                 />
-                <URLInput 
-                    label={__('URL', 'tw-blocks')}
-                    value={url}
-                    onChange={ (url) => {
-                        this.onChangeURL( url );
-                    } }
+                {isSelected &&
+                    <URLInput 
+                        label={__('URL', 'tw-blocks')}
+                        value={url}
+                        onChange={ (url) => {
+                            this.onChangeURL( url );
+                        } }
                 /> 
+                }
             </>
         )
     }

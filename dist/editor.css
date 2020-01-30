@@ -14205,6 +14205,10 @@ readers do not read off random characters that represent icons */
     margin-left: 0;
     margin-right: 0; } }
 
+@media screen and (min-width: 768px) {
+  .wp-block-tw-blocks-grid .block-editor-block-list__layout .block-editor-block-list__block {
+    padding: 0 .75rem; } }
+
 .wp-block-tw-blocks-grid.wp-block-tw-blocks-grid .editor-inner-blocks {
   flex: 0 0 100%; }
 

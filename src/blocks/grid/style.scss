@@ -7,6 +7,12 @@
         }
     }
 
+    > div {
+        @media screen and (min-width: 768px) {
+            padding: 0 .75rem;
+        }
+    }
+
     &.has-1-columns {
         @include grid-layout(1);
     }
