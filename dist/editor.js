@@ -86,10 +86,10 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/bootstrap/dist/css/bootstrap.css":
-/*!*******************************************************!*\
-  !*** ./node_modules/bootstrap/dist/css/bootstrap.css ***!
-  \*******************************************************/
+/***/ "./node_modules/bootstrap/scss/bootstrap.scss":
+/*!****************************************************!*\
+  !*** ./node_modules/bootstrap/scss/bootstrap.scss ***!
+  \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -815,6 +815,17 @@ function keys(object) {
 
 module.exports = assign;
 
+
+/***/ }),
+
+/***/ "./src/animate/style.scss":
+/*!********************************!*\
+  !*** ./src/animate/style.scss ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -2444,19 +2455,22 @@ function (_Component) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var bootstrap_dist_css_bootstrap_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.css */ "./node_modules/bootstrap/dist/css/bootstrap.css");
-/* harmony import */ var bootstrap_dist_css_bootstrap_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var bootstrap_scss_bootstrap_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/scss/bootstrap.scss */ "./node_modules/bootstrap/scss/bootstrap.scss");
+/* harmony import */ var bootstrap_scss_bootstrap_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap_scss_bootstrap_scss__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var font_awesome_css_font_awesome_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! font-awesome/css/font-awesome.min.css */ "./node_modules/font-awesome/css/font-awesome.min.css");
 /* harmony import */ var font_awesome_css_font_awesome_min_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(font_awesome_css_font_awesome_min_css__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _blocks_reset_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blocks/reset.scss */ "./src/blocks/reset.scss");
 /* harmony import */ var _blocks_reset_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_blocks_reset_scss__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _hoc_spacing_controls__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./hoc/spacing-controls */ "./src/hoc/spacing-controls/index.js");
-/* harmony import */ var _blocks_grid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./blocks/grid */ "./src/blocks/grid/index.js");
-/* harmony import */ var _blocks_text__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./blocks/text */ "./src/blocks/text/index.js");
-/* harmony import */ var _blocks_button__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./blocks/button */ "./src/blocks/button/index.js");
-/* harmony import */ var _blocks_title__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./blocks/title */ "./src/blocks/title/index.js");
-/* harmony import */ var _blocks_image__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./blocks/image */ "./src/blocks/image/index.js");
-/* harmony import */ var _blocks_flexible_content__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./blocks/flexible-content */ "./src/blocks/flexible-content/index.js");
+/* harmony import */ var _animate_style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./animate/style.scss */ "./src/animate/style.scss");
+/* harmony import */ var _animate_style_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_animate_style_scss__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _hoc_spacing_controls__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./hoc/spacing-controls */ "./src/hoc/spacing-controls/index.js");
+/* harmony import */ var _blocks_grid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./blocks/grid */ "./src/blocks/grid/index.js");
+/* harmony import */ var _blocks_text__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./blocks/text */ "./src/blocks/text/index.js");
+/* harmony import */ var _blocks_button__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./blocks/button */ "./src/blocks/button/index.js");
+/* harmony import */ var _blocks_title__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./blocks/title */ "./src/blocks/title/index.js");
+/* harmony import */ var _blocks_image__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./blocks/image */ "./src/blocks/image/index.js");
+/* harmony import */ var _blocks_flexible_content__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./blocks/flexible-content */ "./src/blocks/flexible-content/index.js");
+
 
 
 

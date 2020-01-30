@@ -1,5 +1,6 @@
-import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/scss/bootstrap.scss';
 import "./hoc/spacing-controls/script";
+import "./animate/style.scss";
 import "./nav/style.scss";
 import './blocks/grid/script';
 import './blocks/text/script';
