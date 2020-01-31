@@ -2528,22 +2528,6 @@ var containerControlOptions = [{
   label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Container Fluid', 'tw-blocks'),
   value: 'container-fluid'
 }];
-var backgroundColorOptions = [{
-  label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('None', 'tw-blocks'),
-  value: null
-}, {
-  label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Primary', 'tw-blocks'),
-  value: 'bg-primary'
-}, {
-  label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Secondary', 'tw-blocks'),
-  value: 'bg-secondary'
-}, {
-  label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Light', 'tw-blocks'),
-  value: 'bg-light'
-}, {
-  label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Dark', 'tw-blocks'),
-  value: 'bg-dark'
-}];
 var spacingControlOptions = [{
   label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('None', 'tw-blocks'),
   value: 0
@@ -2616,10 +2600,6 @@ var addStyleControlAttribute = function addStyleControlAttribute(settings, name)
       type: 'string',
       default: containerControlOptions[0].value
     },
-    backgroundColor: {
-      type: 'string',
-      default: backgroundColorOptions[0].value
-    },
     id: {
       type: 'string',
       default: ''
@@ -2640,7 +2620,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       return wp.element.createElement(BlockEdit, _extends({}, props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 167
+          lineNumber: 141
         },
         __self: this
       }));
@@ -2656,43 +2636,82 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
         marginLeft = _props$attributes.marginLeft,
         marginRight = _props$attributes.marginRight,
         container = _props$attributes.container,
-        backgroundColor = _props$attributes.backgroundColor,
         id = _props$attributes.id;
-    var spacingClasses = "pt-".concat(paddingTop, " pb-").concat(paddingBottom, " pl-").concat(paddingLeft, " pr-").concat(paddingRight, " mt-").concat(marginTop, " mb-").concat(marginBottom, " ml-").concat(marginLeft, " mr-").concat(marginRight);
+
+    var spacingClasses = function spacingClasses() {
+      var classes = [];
+
+      if (paddingTop !== null && paddingTop !== 0) {
+        classes.push("pt-".concat(paddingTop));
+      }
+
+      if (paddingBottom !== null && paddingBottom !== 0) {
+        classes.push("pb-".concat(paddingBottom));
+      }
+
+      if (paddingLeft !== null && paddingLeft !== 0) {
+        classes.push("pl-".concat(paddingLeft));
+      }
+
+      if (paddingRight !== null && paddingRight !== 0) {
+        classes.push("pr-".concat(paddingRight));
+      }
+
+      if (marginTop !== null && marginTop !== 0) {
+        classes.push("pt-".concat(marginTop));
+      }
+
+      if (marginBottom !== null && marginBottom !== 0) {
+        classes.push("pb-".concat(marginBottom));
+      }
+
+      if (marginLeft !== null && marginLeft !== 0) {
+        classes.push("pl-".concat(marginLeft));
+      }
+
+      if (marginRight !== null && marginRight !== 0) {
+        classes.push("pr-".concat(marginRight));
+      }
+
+      console.log(classes);
+      return classes.join(' ');
+    };
+
+    console.log(spacingClasses()); // const spacingClasses = `pt-${ paddingTop } pb-${ paddingBottom } pl-${ paddingLeft } pr-${ paddingRight} mt-${ marginTop } mb-${ marginBottom } ml-${ marginLeft } mr-${ marginRight}`;
+
     var containerClass = "".concat(container);
-    var backgroundColorClass = "".concat(backgroundColor);
-    var parentWrapperClasses = [spacingClasses, backgroundColorClass].join(' ');
+    var parentWrapperClasses = [spacingClasses()].join(' ');
     return wp.element.createElement(wp.element.Fragment, null, wp.element.createElement("div", {
+      id: id,
       className: parentWrapperClasses,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 178
+        lineNumber: 192
       },
       __self: this
     }, wp.element.createElement("div", {
-      id: id,
       className: containerClass,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 179
+        lineNumber: 193
       },
       __self: this
     }, wp.element.createElement(BlockEdit, _extends({}, props, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 180
+        lineNumber: 194
       },
       __self: this
     })))), wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_4__["InspectorControls"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 183
+        lineNumber: 197
       },
       __self: this
     }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["PanelBody"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 184
+        lineNumber: 198
       },
       __self: this
     }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["TextControl"], {
@@ -2705,28 +2724,6 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 185
-      },
-      __self: this
-    })), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["PanelBody"], {
-      title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Background'),
-      initialOpen: true,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 195
-      },
-      __self: this
-    }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Background Color'),
-      value: backgroundColor,
-      options: backgroundColorOptions,
-      onChange: function onChange(selectedBackgroundColor) {
-        props.setAttributes({
-          backgroundColor: selectedBackgroundColor
-        });
-      },
-      __source: {
-        fileName: _jsxFileName,
         lineNumber: 199
       },
       __self: this
@@ -2735,7 +2732,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       initialOpen: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 210
+        lineNumber: 209
       },
       __self: this
     }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
@@ -2749,7 +2746,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 214
+        lineNumber: 213
       },
       __self: this
     })), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["PanelBody"], {
@@ -2757,7 +2754,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       initialOpen: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 225
+        lineNumber: 224
       },
       __self: this
     }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
@@ -2771,7 +2768,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 229
+        lineNumber: 228
       },
       __self: this
     }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
@@ -2785,7 +2782,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 239
+        lineNumber: 238
       },
       __self: this
     }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
@@ -2799,7 +2796,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 249
+        lineNumber: 248
       },
       __self: this
     }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
@@ -2813,7 +2810,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 259
+        lineNumber: 258
       },
       __self: this
     })), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["PanelBody"], {
@@ -2821,7 +2818,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       initialOpen: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 270
+        lineNumber: 269
       },
       __self: this
     }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
@@ -2835,7 +2832,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 274
+        lineNumber: 273
       },
       __self: this
     }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
@@ -2849,7 +2846,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 284
+        lineNumber: 283
       },
       __self: this
     }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
@@ -2863,7 +2860,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 294
+        lineNumber: 293
       },
       __self: this
     }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
@@ -2877,7 +2874,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 304
+        lineNumber: 303
       },
       __self: this
     }))));
@@ -2895,10 +2892,13 @@ Object(_wordpress_hooks__WEBPACK_IMPORTED_MODULE_2__["addFilter"])('editor.Block
  */
 
 function saveStyle(element, blockType, attributes) {
-  if (!element) {
-    return;
+  console.log(element);
+
+  if (!enableStyleControlOnBlocks.includes(blockType.name)) {
+    return element;
   }
 
+  console.log(blockType);
   var paddingBottom = attributes.paddingBottom,
       paddingLeft = attributes.paddingLeft,
       paddingRight = attributes.paddingRight,
@@ -2908,25 +2908,62 @@ function saveStyle(element, blockType, attributes) {
       marginRight = attributes.marginRight,
       marginTop = attributes.marginTop,
       container = attributes.container,
-      backgroundColor = attributes.backgroundColor,
       id = attributes.id;
-  var spacingClasses = "pt-".concat(paddingTop, " pb-").concat(paddingBottom, " pl-").concat(paddingLeft, " pr-").concat(paddingRight, " mt-").concat(marginTop, " mb-").concat(marginBottom, " ml-").concat(marginLeft, " mr-").concat(marginRight);
+
+  var spacingClasses = function spacingClasses() {
+    var classes = [];
+
+    if (paddingTop !== null && paddingTop !== 0) {
+      classes.push("pt-".concat(paddingTop));
+    }
+
+    if (paddingBottom !== null && paddingBottom !== 0) {
+      classes.push("pb-".concat(paddingBottom));
+    }
+
+    if (paddingLeft !== null && paddingLeft !== 0) {
+      classes.push("pl-".concat(paddingLeft));
+    }
+
+    if (paddingRight !== null && paddingRight !== 0) {
+      classes.push("pr-".concat(paddingRight));
+    }
+
+    if (marginTop !== null && marginTop !== 0) {
+      classes.push("pt-".concat(marginTop));
+    }
+
+    if (marginBottom !== null && marginBottom !== 0) {
+      classes.push("pb-".concat(marginBottom));
+    }
+
+    if (marginLeft !== null && marginLeft !== 0) {
+      classes.push("pl-".concat(marginLeft));
+    }
+
+    if (marginRight !== null && marginRight !== 0) {
+      classes.push("pr-".concat(marginRight));
+    }
+
+    console.log(classes);
+    return classes.join(' ');
+  };
+
   var containerClass = "".concat(container);
-  var backgroundColorClass = "".concat(backgroundColor);
-  var parentWrapperClasses = [spacingClasses, backgroundColorClass].join(' ');
+  var parentWrapperClasses = [spacingClasses()].join(' ');
   return wp.element.createElement("div", {
+    id: id,
     className: parentWrapperClasses,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 347
+      lineNumber: 387
     },
     __self: this
   }, wp.element.createElement("div", {
-    id: id,
     className: containerClass,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 348
+      lineNumber: 388
     },
     __self: this
   }, element));
