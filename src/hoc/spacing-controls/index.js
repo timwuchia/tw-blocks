@@ -12,7 +12,9 @@ const enableStyleControlOnBlocks = [
     'tw-blocks/title',
     'tw-blocks/image',
     'tw-blocks/flexible-content',
-    'tw-blocks/grid'
+    'tw-blocks/grid',
+    'core/columns',
+    'core/group'
 ]
 
 //Available options

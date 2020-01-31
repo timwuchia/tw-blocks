@@ -86,17 +86,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/bootstrap/scss/bootstrap.scss":
-/*!****************************************************!*\
-  !*** ./node_modules/bootstrap/scss/bootstrap.scss ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
 /***/ "./node_modules/classnames/index.js":
 /*!******************************************!*\
   !*** ./node_modules/classnames/index.js ***!
@@ -814,6 +803,17 @@ function keys(object) {
 }
 
 module.exports = assign;
+
+
+/***/ }),
+
+/***/ "./src/animate/script.js":
+/*!*******************************!*\
+  !*** ./src/animate/script.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
 
 
 /***/ }),
@@ -2455,14 +2455,14 @@ function (_Component) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var bootstrap_scss_bootstrap_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/scss/bootstrap.scss */ "./node_modules/bootstrap/scss/bootstrap.scss");
-/* harmony import */ var bootstrap_scss_bootstrap_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap_scss_bootstrap_scss__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var font_awesome_css_font_awesome_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! font-awesome/css/font-awesome.min.css */ "./node_modules/font-awesome/css/font-awesome.min.css");
-/* harmony import */ var font_awesome_css_font_awesome_min_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(font_awesome_css_font_awesome_min_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _blocks_reset_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blocks/reset.scss */ "./src/blocks/reset.scss");
-/* harmony import */ var _blocks_reset_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_blocks_reset_scss__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _animate_style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./animate/style.scss */ "./src/animate/style.scss");
-/* harmony import */ var _animate_style_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_animate_style_scss__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var font_awesome_css_font_awesome_min_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! font-awesome/css/font-awesome.min.css */ "./node_modules/font-awesome/css/font-awesome.min.css");
+/* harmony import */ var font_awesome_css_font_awesome_min_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(font_awesome_css_font_awesome_min_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _blocks_reset_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blocks/reset.scss */ "./src/blocks/reset.scss");
+/* harmony import */ var _blocks_reset_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_blocks_reset_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _animate_style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./animate/style.scss */ "./src/animate/style.scss");
+/* harmony import */ var _animate_style_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_animate_style_scss__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _animate_script_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./animate/script.js */ "./src/animate/script.js");
+/* harmony import */ var _animate_script_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_animate_script_js__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _hoc_spacing_controls__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./hoc/spacing-controls */ "./src/hoc/spacing-controls/index.js");
 /* harmony import */ var _blocks_grid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./blocks/grid */ "./src/blocks/grid/index.js");
 /* harmony import */ var _blocks_text__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./blocks/text */ "./src/blocks/text/index.js");
@@ -2516,7 +2516,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
  // Enable style controls on the following blocks
 
-var enableStyleControlOnBlocks = ['tw-blocks/text', 'tw-blocks/title', 'tw-blocks/image', 'tw-blocks/flexible-content', 'tw-blocks/grid']; //Available options
+var enableStyleControlOnBlocks = ['tw-blocks/text', 'tw-blocks/title', 'tw-blocks/image', 'tw-blocks/flexible-content', 'tw-blocks/grid', 'core/columns', 'core/group']; //Available options
 
 var containerControlOptions = [{
   label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('None', 'tw-blocks'),
@@ -2640,7 +2640,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       return wp.element.createElement(BlockEdit, _extends({}, props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 165
+          lineNumber: 167
         },
         __self: this
       }));
@@ -2666,7 +2666,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       className: parentWrapperClasses,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 176
+        lineNumber: 178
       },
       __self: this
     }, wp.element.createElement("div", {
@@ -2674,25 +2674,25 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       className: containerClass,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 177
+        lineNumber: 179
       },
       __self: this
     }, wp.element.createElement(BlockEdit, _extends({}, props, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 178
+        lineNumber: 180
       },
       __self: this
     })))), wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_4__["InspectorControls"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 181
+        lineNumber: 183
       },
       __self: this
     }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["PanelBody"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 182
+        lineNumber: 184
       },
       __self: this
     }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["TextControl"], {
@@ -2705,7 +2705,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 183
+        lineNumber: 185
       },
       __self: this
     })), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["PanelBody"], {
@@ -2713,7 +2713,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       initialOpen: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 193
+        lineNumber: 195
       },
       __self: this
     }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
@@ -2727,7 +2727,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 197
+        lineNumber: 199
       },
       __self: this
     })), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["PanelBody"], {
@@ -2735,7 +2735,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       initialOpen: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 208
+        lineNumber: 210
       },
       __self: this
     }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
@@ -2749,7 +2749,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 212
+        lineNumber: 214
       },
       __self: this
     })), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["PanelBody"], {
@@ -2757,7 +2757,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       initialOpen: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 223
+        lineNumber: 225
       },
       __self: this
     }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
@@ -2771,7 +2771,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 227
+        lineNumber: 229
       },
       __self: this
     }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
@@ -2785,7 +2785,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 237
+        lineNumber: 239
       },
       __self: this
     }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
@@ -2799,7 +2799,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 247
+        lineNumber: 249
       },
       __self: this
     }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
@@ -2813,7 +2813,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 257
+        lineNumber: 259
       },
       __self: this
     })), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["PanelBody"], {
@@ -2821,7 +2821,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       initialOpen: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 268
+        lineNumber: 270
       },
       __self: this
     }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
@@ -2835,7 +2835,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 272
+        lineNumber: 274
       },
       __self: this
     }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
@@ -2849,7 +2849,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 282
+        lineNumber: 284
       },
       __self: this
     }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
@@ -2863,7 +2863,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 292
+        lineNumber: 294
       },
       __self: this
     }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
@@ -2877,7 +2877,7 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 302
+        lineNumber: 304
       },
       __self: this
     }))));
@@ -2918,7 +2918,7 @@ function saveStyle(element, blockType, attributes) {
     className: parentWrapperClasses,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 345
+      lineNumber: 347
     },
     __self: this
   }, wp.element.createElement("div", {
@@ -2926,7 +2926,7 @@ function saveStyle(element, blockType, attributes) {
     className: containerClass,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 346
+      lineNumber: 348
     },
     __self: this
   }, element));

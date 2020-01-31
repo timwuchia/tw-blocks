@@ -1,7 +1,7 @@
-import 'bootstrap/scss/bootstrap.scss';
 import 'font-awesome/css/font-awesome.min.css';
 import './blocks/reset.scss';
 import "./animate/style.scss";
+import "./animate/script.js"; 
 import './hoc/spacing-controls';
 import './blocks/grid';
 import './blocks/text';
