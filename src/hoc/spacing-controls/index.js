@@ -1,38 +1,16 @@
-import {__} from "@wordpress/i18n";
 import assign from 'lodash.assign';
 import {addFilter} from "@wordpress/hooks";
+import { InspectorControls } from '@wordpress/editor';
 import { createHigherOrderComponent } from '@wordpress/compose';
-import { InspectorControls, RichText } from '@wordpress/editor';
-import { PanelBody, SelectControl, TextControl } from '@wordpress/components';
+import { PanelBody, SelectControl, RangeControl } from '@wordpress/components';
+const { __ } = wp.i18n;
 
-
-// Enable style controls on the following blocks
-const enableStyleControlOnBlocks = [
-    'tw-blocks/text',
-    'tw-blocks/title',
-    'tw-blocks/image',
-    'tw-blocks/flexible-content',
-    'tw-blocks/grid',
-    'core/columns',
-    'core/group'
-]
-
-//Available options
-const containerControlOptions=[
-    { 
-        label: __( 'None', 'tw-blocks' ),
-        value: '',
-    },
-    { 
-        label: __( 'Container', 'tw-blocks' ),
-        value: 'container',
-    },
-    {
-        label: __( 'Container Fluid', 'tw-blocks' ),
-        value: 'container-fluid',
-    }
+// Disable spacing control on the following blocks
+const disableSpacingControlOnBlocks = [
+    'core/image',
 ];
 
+// Available spacing control options
 const spacingControlOptions = [
 
     {
@@ -62,72 +40,60 @@ const spacingControlOptions = [
 ];
 
 /**
- * Add style control attribute to block.
+ * Add spacing control attribute to block.
  *
  * @param {object} settings Current block settings.
  * @param {string} name Name of block.
  *
  * @returns {object} Modified block settings.
  */
-const addStyleControlAttribute = ( settings, name ) => {
-    // Do nothing if it's another block than our defined ones
-    if ( ! enableStyleControlOnBlocks.includes( name ) ) {
+const addSpacingControlAttribute = ( settings, name ) => {
+    // Do nothing if it's another block than our defined ones.
+    if ( disableSpacingControlOnBlocks.includes( name ) ) {
         return settings;
     }
 
     // Use Lodash's assign to gracefully handle if attributes are undefined
     settings.attributes = assign( settings.attributes, {
-            paddingTop: {
-                type: 'number',
-                default: spacingControlOptions[0].value
-            },
-            paddingBottom: {
-                type: 'number',
-                default: spacingControlOptions[0].value
-            },
-            paddingLeft: {
-                type: 'number',
-                default: spacingControlOptions[0].value
-            },
-            paddingRight: {
-                type: 'number',
-                default: spacingControlOptions[0].value
-            },
-            marginTop: {
-                type: 'number',
-                default: spacingControlOptions[0].value
-            },
-            marginBottom: {
-                type: 'number',
-                default: spacingControlOptions[0].value
-            },
-            marginLeft: {
-                type: 'number',
-                default: spacingControlOptions[0].value
-            },
-            marginRight: {
-                type: 'number',
-                default: spacingControlOptions[0].value
-            },
-            container: {
-                type: 'string',
-                default: containerControlOptions[0].value
-            },
-            id: {
-                type: 'string',
-                default: ''
-            }
+        paddingTop: {
+            type: 'number',
+            default: spacingControlOptions[0].value
+        },
+        paddingBottom: {
+            type: 'number',
+            default: spacingControlOptions[0].value
+        },
+        paddingLeft: {
+            type: 'number',
+            default: spacingControlOptions[0].value
+        },
+        paddingRight: {
+            type: 'number',
+            default: spacingControlOptions[0].value
+        },
+        marginTop: {
+            type: 'number',
+            default: spacingControlOptions[0].value
+        },
+        marginBottom: {
+            type: 'number',
+            default: spacingControlOptions[0].value
+        },
+        marginLeft: {
+            type: 'number',
+            default: spacingControlOptions[0].value
+        },
+        marginRight: {
+            type: 'number',
+            default: spacingControlOptions[0].value
+        },
+        
     } );
 
     return settings;
 };
 
-
-addFilter( 
-    'blocks.registerBlockType', 
-    'tw-blocks/attribute/style', 
-    addStyleControlAttribute 
-);
+addFilter( 'blocks.registerBlockType', 'extend-block-example/attribute/spacing', addSpacingControlAttribute );
 
 /**
  * Create HOC to add style control to inspector controls of block.
@@ -136,7 +102,7 @@ addFilter(
 const withStyleControl = createHigherOrderComponent( ( BlockEdit ) => {
     return ( props ) => {
         // Do nothing if it's another block than our defined ones.
-        if ( ! enableStyleControlOnBlocks.includes( props.name ) ) {
+        if ( disableSpacingControlOnBlocks.includes( props.name ) ) {
             return (
                 <BlockEdit { ...props } />
             );
@@ -183,44 +149,13 @@ const withStyleControl = createHigherOrderComponent( ( BlockEdit ) => {
             console.log(classes);
             return classes.join(' ')
         }
-        console.log(spacingClasses())
-        // const spacingClasses = `pt-${ paddingTop } pb-${ paddingBottom } pl-${ paddingLeft } pr-${ paddingRight} mt-${ marginTop } mb-${ marginBottom } ml-${ marginLeft } mr-${ marginRight}`;
-        const containerClass=`${container}`;
         const parentWrapperClasses=[spacingClasses()].join(' ')
         return (
             <>
-                <div id={id}  className={parentWrapperClasses}>
-                    <div className={containerClass}>
-                        <BlockEdit { ...props } />
-                    </div>
+                <div className={parentWrapperClasses}>
+                    <BlockEdit { ...props } />
                 </div>
                 <InspectorControls>
-                <PanelBody>
-                    <TextControl 
-                        label={__('ID')}
-                        value={ id }
-                        onChange={(id) => {
-                            props.setAttributes({
-                                id
-                            })
-                        } }
-                    />
-                </PanelBody>
-                    <PanelBody
-                        title={ __( 'Container Control' ) }
-                        initialOpen={ true }
-                    >
-                        <SelectControl 
-                            label={ __( 'Container Type' ) }
-                            value={ container }
-                            options={ containerControlOptions }
-                            onChange={ ( selectedContainerOption ) => {
-                                props.setAttributes( {
-                                    container: selectedContainerOption
-                                } );
-                            } }
-                        />
-                    </PanelBody>
                     <PanelBody
                         title={ __( 'Control Padding' ) }
                         initialOpen={ true }
@@ -322,74 +257,3 @@ addFilter(
     'tw-blocks/with-style-control', 
     withStyleControl,  
 );
-
-/**
- * Add margin style attribute to save element of block.
- *
- * @param {object} saveElementProps Props of save element.
- * @param {Object} blockType Block type information.
- * @param {Object} attributes Attributes of block.
- *
- * @returns {object} Modified props of save element.
- */
-
-function saveStyle( element, blockType, attributes  ) {
-    console.log(element)
-	if ( ! enableStyleControlOnBlocks.includes( blockType.name ) ) {
-        return (
-            element
-        );
-    }
-    console.log(blockType)
-    const { paddingBottom, paddingLeft, paddingRight, paddingTop, marginBottom, marginLeft, marginRight, marginTop, container, id } = attributes;
-    const spacingClasses = () => {
-
-        let classes = [];
-
-        if(paddingTop !== null && paddingTop !==0 ){
-            classes.push(`pt-${paddingTop}`);
-        }
-
-        if(paddingBottom !== null && paddingBottom !==0){
-            classes.push(`pb-${paddingBottom}`);
-        }
-
-        if(paddingLeft !== null && paddingLeft !==0){
-            classes.push(`pl-${paddingLeft}`);
-        }
-
-        if(paddingRight !== null &&  paddingRight !==0){
-            classes.push(`pr-${paddingRight}`);
-        }
-
-        if(marginTop !== null && marginTop !==0 ){
-            classes.push(`pt-${marginTop}`);
-        }
-
-        if(marginBottom !== null && marginBottom !==0){
-            classes.push(`pb-${marginBottom}`);
-        }
-
-        if(marginLeft !== null && marginLeft !==0){
-            classes.push(`pl-${marginLeft}`);
-        }
-
-        if(marginRight !== null &&  marginRight !==0){
-            classes.push(`pr-${marginRight}`);
-        }
-
-        console.log(classes);
-        return classes.join(' ')
-    }
-    const containerClass = `${container}`;
-    const parentWrapperClasses=[spacingClasses()].join(' ')
-	return (
-        <div id={id} className={ parentWrapperClasses }>
-            <div className={containerClass}>
-                { element }
-            </div>
-        </div>
-    );
-}
-
- addFilter( 'blocks.getSaveElement', 'tw-blocks/get-save-content/save-style', saveStyle );

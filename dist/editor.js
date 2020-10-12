@@ -86,68 +86,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/classnames/index.js":
-/*!******************************************!*\
-  !*** ./node_modules/classnames/index.js ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
-  Copyright (c) 2017 Jed Watson.
-  Licensed under the MIT License (MIT), see
-  http://jedwatson.github.io/classnames
-*/
-/* global define */
-
-(function () {
-	'use strict';
-
-	var hasOwn = {}.hasOwnProperty;
-
-	function classNames () {
-		var classes = [];
-
-		for (var i = 0; i < arguments.length; i++) {
-			var arg = arguments[i];
-			if (!arg) continue;
-
-			var argType = typeof arg;
-
-			if (argType === 'string' || argType === 'number') {
-				classes.push(arg);
-			} else if (Array.isArray(arg) && arg.length) {
-				var inner = classNames.apply(null, arg);
-				if (inner) {
-					classes.push(inner);
-				}
-			} else if (argType === 'object') {
-				for (var key in arg) {
-					if (hasOwn.call(arg, key) && arg[key]) {
-						classes.push(key);
-					}
-				}
-			}
-		}
-
-		return classes.join(' ');
-	}
-
-	if ( true && module.exports) {
-		classNames.default = classNames;
-		module.exports = classNames;
-	} else if (true) {
-		// register as 'classnames', consistent with npm package name
-		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
-			return classNames;
-		}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	} else {}
-}());
-
-
-/***/ }),
-
 /***/ "./node_modules/font-awesome/css/font-awesome.min.css":
 /*!************************************************************!*\
   !*** ./node_modules/font-awesome/css/font-awesome.min.css ***!
@@ -807,1240 +745,9 @@ module.exports = assign;
 
 /***/ }),
 
-/***/ "./src/animate/script.js":
-/*!*******************************!*\
-  !*** ./src/animate/script.js ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-
-/***/ }),
-
-/***/ "./src/animate/style.scss":
-/*!********************************!*\
-  !*** ./src/animate/style.scss ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ "./src/blocks/button/edit.js":
-/*!***********************************!*\
-  !*** ./src/blocks/button/edit.js ***!
-  \***********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/editor */ "@wordpress/editor");
-/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "C:\\MAMP\\htdocs\\timwuweb\\wp-content\\plugins\\tw-blocks\\src\\blocks\\button\\edit.js";
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-
-
-
-
-var Edit =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(Edit, _Component);
-
-  function Edit() {
-    var _getPrototypeOf2;
-
-    var _this;
-
-    _classCallCheck(this, Edit);
-
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Edit)).call.apply(_getPrototypeOf2, [this].concat(args)));
-
-    _defineProperty(_assertThisInitialized(_this), "onChangeText", function (text) {
-      _this.props.setAttributes({
-        text: text
-      });
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "onChangeURL", function (url) {
-      _this.props.setAttributes({
-        url: url
-      });
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "onChangeTarget", function (target) {
-      _this.props.setAttributes({
-        target: !target
-      });
-    });
-
-    return _this;
-  }
-
-  _createClass(Edit, [{
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      var _this$props = this.props,
-          attributes = _this$props.attributes,
-          isSelected = _this$props.isSelected;
-      var text = attributes.text,
-          url = attributes.url,
-          target = attributes.target,
-          buttonClass = attributes.buttonClass;
-      var btnClass = buttonClass ? "btn btn-".concat(buttonClass) : null;
-      var btnOptions = [{
-        label: 'Primary',
-        value: 'primary'
-      }, {
-        label: 'Secondary',
-        value: 'secondary'
-      }, {
-        label: 'Dark',
-        value: 'dark'
-      }, {
-        label: 'Light',
-        value: 'light'
-      }];
-      console.log(attributes);
-      return wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__["InspectorControls"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 44
-        },
-        __self: this
-      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["PanelBody"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 45
-        },
-        __self: this
-      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["ToggleControl"], {
-        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Open In New Tab', 'tw-blocks'),
-        checked: target,
-        onChange: function onChange() {
-          _this2.props.setAttributes({
-            target: !target
-          });
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 46
-        },
-        __self: this
-      }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["SelectControl"], {
-        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Button Style', 'tw-blocks'),
-        value: buttonClass,
-        options: btnOptions,
-        onChange: function onChange(btnOption) {
-          _this2.props.setAttributes({
-            buttonClass: btnOption
-          });
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 51
-        },
-        __self: this
-      }))), wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"], {
-        tagName: "a",
-        value: text,
-        href: url,
-        className: btnClass,
-        target: target === true ? '_blank' : '_self',
-        onChange: function onChange(text) {
-          _this2.onChangeText(text);
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 59
-        },
-        __self: this
-      }), isSelected && wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__["URLInput"], {
-        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('URL', 'tw-blocks'),
-        value: url,
-        onChange: function onChange(url) {
-          _this2.onChangeURL(url);
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 70
-        },
-        __self: this
-      }));
-    }
-  }]);
-
-  return Edit;
-}(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-/* harmony default export */ __webpack_exports__["default"] = (Edit);
-
-/***/ }),
-
-/***/ "./src/blocks/button/index.js":
-/*!************************************!*\
-  !*** ./src/blocks/button/index.js ***!
-  \************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _style_editor_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.editor.scss */ "./src/blocks/button/style.editor.scss");
-/* harmony import */ var _style_editor_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_editor_scss__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
-/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit */ "./src/blocks/button/edit.js");
-/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./save */ "./src/blocks/button/save.js");
-
-
-
-
-
-var attributes = {
-  text: {
-    type: 'string',
-    source: 'html',
-    selector: 'a',
-    default: ''
-  },
-  url: {
-    type: 'string',
-    selector: 'a',
-    source: 'attribute',
-    attribute: 'href',
-    default: ''
-  },
-  target: {
-    type: 'boolean',
-    default: false
-  },
-  buttonClass: {
-    type: '',
-    selector: 'a',
-    source: 'attribute',
-    attribute: 'class'
-  }
-};
-Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('tw-blocks/button', {
-  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('TW Button', 'tw-blocks'),
-  category: 'tw-blocks-category',
-  description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Block for buttons', 'tw-blocks'),
-  keywords: [Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('button', 'tw-blocks'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('link', 'tw-blocks')],
-  attributes: attributes,
-  edit: _edit__WEBPACK_IMPORTED_MODULE_3__["default"],
-  save: _save__WEBPACK_IMPORTED_MODULE_4__["default"]
-});
-
-/***/ }),
-
-/***/ "./src/blocks/button/save.js":
-/*!***********************************!*\
-  !*** ./src/blocks/button/save.js ***!
-  \***********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/editor */ "@wordpress/editor");
-/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "C:\\MAMP\\htdocs\\timwuweb\\wp-content\\plugins\\tw-blocks\\src\\blocks\\button\\save.js";
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-
-
-var Save =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(Save, _Component);
-
-  function Save() {
-    _classCallCheck(this, Save);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(Save).apply(this, arguments));
-  }
-
-  _createClass(Save, [{
-    key: "render",
-    value: function render() {
-      var attributes = this.props.attributes;
-      var text = attributes.text,
-          url = attributes.url,
-          target = attributes.target,
-          buttonClass = attributes.buttonClass;
-      var btnClass = buttonClass ? "btn btn-".concat(buttonClass) : null;
-      console.log(target);
-      return wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"].Content, {
-        tagName: "a",
-        href: url,
-        className: btnClass,
-        target: target === true ? '_blank' : '_self',
-        rel: target === true ? 'noopener noreferrer' : '',
-        value: text,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 15
-        },
-        __self: this
-      });
-    }
-  }]);
-
-  return Save;
-}(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-/* harmony default export */ __webpack_exports__["default"] = (Save);
-
-/***/ }),
-
-/***/ "./src/blocks/button/style.editor.scss":
-/*!*********************************************!*\
-  !*** ./src/blocks/button/style.editor.scss ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ "./src/blocks/flexible-content/index.js":
-/*!**********************************************!*\
-  !*** ./src/blocks/flexible-content/index.js ***!
-  \**********************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
-/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/editor */ "@wordpress/editor");
-/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "C:\\MAMP\\htdocs\\timwuweb\\wp-content\\plugins\\tw-blocks\\src\\blocks\\flexible-content\\index.js";
-
-
-
-Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])('tw-blocks/flexible-content', {
-  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Flexible Content', 'tw-blocks'),
-  description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Block that allows basic layout', 'tw-blocks'),
-  category: 'tw-blocks-category',
-  supports: {
-    html: false,
-    align: ['wide', 'full']
-  },
-  icon: 'grid-view',
-  edit: function edit() {
-    return wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__["InnerBlocks"], {
-      allowedBlocks: ['tw-blocks/text', 'tw-blocks/title', 'tw-blocks/button', 'core/shortcode'],
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 19
-      },
-      __self: this
-    }));
-  },
-  save: function save(_ref) {
-    var attributes = _ref.attributes;
-    return wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__["InnerBlocks"].Content, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 34
-      },
-      __self: this
-    }));
-  }
-});
-
-/***/ }),
-
-/***/ "./src/blocks/grid/edit.js":
-/*!*********************************!*\
-  !*** ./src/blocks/grid/edit.js ***!
-  \*********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/editor */ "@wordpress/editor");
-/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "C:\\MAMP\\htdocs\\timwuweb\\wp-content\\plugins\\tw-blocks\\src\\blocks\\grid\\edit.js";
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-
-
-
-var Edit =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(Edit, _Component);
-
-  function Edit() {
-    _classCallCheck(this, Edit);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(Edit).apply(this, arguments));
-  }
-
-  _createClass(Edit, [{
-    key: "render",
-    value: function render() {
-      var _this = this;
-
-      var _this$props = this.props,
-          attributes = _this$props.attributes,
-          className = _this$props.className;
-      var columns = attributes.columns,
-          tabletColumns = attributes.tabletColumns,
-          desktopColumns = attributes.desktopColumns;
-      return wp.element.createElement("div", {
-        className: "".concat(className, " tw-grid has-").concat(columns, "-columns tablet-has-").concat(tabletColumns, "-columns desktop-has-").concat(desktopColumns, "-columns"),
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 11
-        },
-        __self: this
-      }, wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__["InspectorControls"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 12
-        },
-        __self: this
-      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["PanelBody"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 13
-        },
-        __self: this
-      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["RangeControl"], {
-        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Columns', 'tw-blocks'),
-        value: columns,
-        onChange: function onChange(columns) {
-          return _this.props.setAttributes({
-            columns: columns
-          });
-        },
-        min: 1,
-        max: 6,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 14
-        },
-        __self: this
-      }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["RangeControl"], {
-        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Tablet Columns', 'tw-blocks'),
-        value: tabletColumns,
-        onChange: function onChange(tabletColumns) {
-          return _this.props.setAttributes({
-            tabletColumns: tabletColumns
-          });
-        },
-        min: 1,
-        max: 6,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 21
-        },
-        __self: this
-      }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["RangeControl"], {
-        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Desktop Columns', 'tw-blocks'),
-        value: desktopColumns,
-        onChange: function onChange(desktopColumns) {
-          return _this.props.setAttributes({
-            desktopColumns: desktopColumns
-          });
-        },
-        min: 0,
-        max: 12,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 28
-        },
-        __self: this
-      }))), wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__["InnerBlocks"], {
-        allowedBlocks: ['tw-blocks/flexible-content', 'tw-blocks/title', 'tw-blocks/image'],
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 37
-        },
-        __self: this
-      }));
-    }
-  }]);
-
-  return Edit;
-}(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-/* harmony default export */ __webpack_exports__["default"] = (Edit);
-
-/***/ }),
-
-/***/ "./src/blocks/grid/index.js":
+/***/ "./src/blocks/test/index.js":
 /*!**********************************!*\
-  !*** ./src/blocks/grid/index.js ***!
-  \**********************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _style_editor_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.editor.scss */ "./src/blocks/grid/style.editor.scss");
-/* harmony import */ var _style_editor_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_editor_scss__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
-/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit */ "./src/blocks/grid/edit.js");
-/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./save */ "./src/blocks/grid/save.js");
-
-
-
-
-
-var attributes = {
-  columns: {
-    type: 'number',
-    default: 1
-  },
-  tabletColumns: {
-    type: 'number',
-    default: 2
-  },
-  desktopColumns: {
-    type: 'number',
-    default: 3
-  }
-};
-Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('tw-blocks/grid', {
-  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Grid Layuout', 'tw-blocks'),
-  description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])(' Layout for several columns ', 'tw-blocks'),
-  category: 'tw-blocks-category',
-  icon: 'grid-view',
-  keywords: [Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('grid', 'tw-blocks'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('columns', 'tw-blocks'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('multi', 'tw-blocks')],
-  attributes: attributes,
-  edit: _edit__WEBPACK_IMPORTED_MODULE_3__["default"],
-  save: _save__WEBPACK_IMPORTED_MODULE_4__["default"]
-});
-
-/***/ }),
-
-/***/ "./src/blocks/grid/save.js":
-/*!*********************************!*\
-  !*** ./src/blocks/grid/save.js ***!
-  \*********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/editor */ "@wordpress/editor");
-/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "C:\\MAMP\\htdocs\\timwuweb\\wp-content\\plugins\\tw-blocks\\src\\blocks\\grid\\save.js";
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-
-
-var Save =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(Save, _Component);
-
-  function Save() {
-    _classCallCheck(this, Save);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(Save).apply(this, arguments));
-  }
-
-  _createClass(Save, [{
-    key: "render",
-    value: function render() {
-      var attributes = this.props.attributes;
-      var columns = attributes.columns,
-          tabletColumns = attributes.tabletColumns,
-          desktopColumns = attributes.desktopColumns;
-      return wp.element.createElement("div", {
-        className: "tw-grid has-".concat(columns, "-columns tablet-has-").concat(tabletColumns, "-columns desktop-has-").concat(desktopColumns, "-columns"),
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 11
-        },
-        __self: this
-      }, wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__["InnerBlocks"].Content, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 12
-        },
-        __self: this
-      }));
-    }
-  }]);
-
-  return Save;
-}(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-/* harmony default export */ __webpack_exports__["default"] = (Save);
-
-/***/ }),
-
-/***/ "./src/blocks/grid/style.editor.scss":
-/*!*******************************************!*\
-  !*** ./src/blocks/grid/style.editor.scss ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ "./src/blocks/image/edit.js":
-/*!**********************************!*\
-  !*** ./src/blocks/image/edit.js ***!
-  \**********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/editor */ "@wordpress/editor");
-/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
-/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__);
-var _jsxFileName = "C:\\MAMP\\htdocs\\timwuweb\\wp-content\\plugins\\tw-blocks\\src\\blocks\\image\\edit.js";
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-
-
-
-
-
-var Edit =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(Edit, _Component);
-
-  function Edit() {
-    var _getPrototypeOf2;
-
-    var _this;
-
-    _classCallCheck(this, Edit);
-
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Edit)).call.apply(_getPrototypeOf2, [this].concat(args)));
-
-    _defineProperty(_assertThisInitialized(_this), "onSelectImage", function (_ref) {
-      var url = _ref.url,
-          id = _ref.id,
-          alt = _ref.alt;
-
-      _this.props.setAttributes({
-        url: url,
-        alt: alt,
-        id: id
-      });
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "onSelectImageURL", function (url) {
-      _this.props.setAttributes({
-        url: url,
-        alt: '',
-        id: null
-      });
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "getImageSizes", function () {
-      //The for...in statement iterates over all enumerable properties of an object that are keyed by strings (ignoring ones keyed by Symbols), including inherited enumerable properties.
-      var _this$props = _this.props,
-          image = _this$props.image,
-          imageSizes = _this$props.imageSizes;
-      if (!image) return [];
-      var options = [];
-      var sizes = image.media_details.sizes;
-
-      var _loop = function _loop(key) {
-        var size = sizes[key];
-        var imageSize = imageSizes.find(function (size) {
-          return size.slug === key;
-        });
-
-        if (imageSize) {
-          options.push({
-            label: imageSize.name,
-            value: size.source_url
-          });
-        }
-      };
-
-      for (var key in sizes) {
-        _loop(key);
-      }
-
-      return options;
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "onChangeImageSize", function (url) {
-      _this.props.setAttributes({
-        url: url
-      });
-    });
-
-    _defineProperty(_assertThisInitialized(_this), "onChangeheight", function (height) {
-      _this.props.setAttributes({
-        height: height
-      });
-    });
-
-    return _this;
-  }
-
-  _createClass(Edit, [{
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      var attributes = this.props.attributes;
-      var url = attributes.url,
-          alt = attributes.alt,
-          id = attributes.id,
-          imgFull = attributes.imgFull,
-          height = attributes.height;
-      var heightOptions = [{
-        label: '200',
-        value: 'img-h-200'
-      }, {
-        label: '300',
-        value: 'img-h-300'
-      }, {
-        label: '400',
-        value: 'img-h-400'
-      }, {
-        label: '500',
-        value: 'img-h-500'
-      }, {
-        label: '600',
-        value: 'img-h-600'
-      }, {
-        label: '700',
-        value: 'img-h-700'
-      }];
-      var fullImageClass = imgFull ? 'img-100' : null;
-      var heightClass = height ? height : null;
-      console.log(imgFull);
-      return wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["InspectorControls"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 85
-        },
-        __self: this
-      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["PanelBody"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 86
-        },
-        __self: this
-      }, id && wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["SelectControl"], {
-        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])('Image Size', 'tw-blocks'),
-        options: this.getImageSizes(),
-        onChange: this.onChangeImageSize,
-        value: url,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 89
-        },
-        __self: this
-      }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["SelectControl"], {
-        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])('Height for Desktop', 'tw-blocks'),
-        options: heightOptions,
-        onChange: this.onChangeheight,
-        value: height,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 95
-        },
-        __self: this
-      }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__["ToggleControl"], {
-        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__["__"])('100% Wide Image', 'tw-blocks'),
-        checked: imgFull,
-        onChange: function onChange() {
-          _this2.props.setAttributes({
-            imgFull: !imgFull
-          });
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 101
-        },
-        __self: this
-      })))), url ? wp.element.createElement("div", {
-        className: "tw-image ".concat(fullImageClass, " ").concat(heightClass),
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 111
-        },
-        __self: this
-      }, wp.element.createElement("img", {
-        src: url,
-        alt: alt,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 112
-        },
-        __self: this
-      })) : wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_1__["MediaPlaceholder"], {
-        icon: "format-image",
-        allowedTypes: ['image'],
-        onSelect: this.onSelectImage,
-        onSelectURL: this.onSelectImageURL,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 114
-        },
-        __self: this
-      }));
-    }
-  }]);
-
-  return Edit;
-}(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(_wordpress_data__WEBPACK_IMPORTED_MODULE_3__["withSelect"])(function (select, props) {
-  // select here is destructured from wp.data.select
-  var id = props.attributes.id;
-  return {
-    image: id ? select('core').getMedia(id) : null,
-    imageSizes: select('core/editor').getEditorSettings().imageSizes
-  };
-})(Edit));
-
-/***/ }),
-
-/***/ "./src/blocks/image/index.js":
-/*!***********************************!*\
-  !*** ./src/blocks/image/index.js ***!
-  \***********************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _style_editor_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.editor.scss */ "./src/blocks/image/style.editor.scss");
-/* harmony import */ var _style_editor_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_editor_scss__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
-/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./save */ "./src/blocks/image/save.js");
-/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./edit */ "./src/blocks/image/edit.js");
-
-
-
-
-
-var attributes = {
-  url: {
-    type: 'string',
-    selector: 'img',
-    source: 'attribute',
-    attribute: 'src',
-    default: ''
-  },
-  alt: {
-    type: 'string',
-    selector: 'img',
-    source: 'attribute',
-    attribute: 'alt',
-    default: ''
-  },
-  id: {
-    type: 'number',
-    default: null
-  },
-  imgFull: {
-    type: 'boolean',
-    default: false
-  },
-  height: {
-    type: 'string',
-    selector: '.tw-image',
-    source: 'attribute',
-    attribute: 'class',
-    default: ''
-  }
-};
-Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('tw-blocks/image', {
-  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('TW Image', 'tw-blocks'),
-  description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('layout for images', 'tw-blocks'),
-  category: 'tw-blocks-category',
-  keywords: [Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('image', 'tw-blocks'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('picture', 'tw-blocks')],
-  attributes: attributes,
-  edit: _edit__WEBPACK_IMPORTED_MODULE_4__["default"],
-  save: _save__WEBPACK_IMPORTED_MODULE_3__["default"]
-});
-
-/***/ }),
-
-/***/ "./src/blocks/image/save.js":
-/*!**********************************!*\
-  !*** ./src/blocks/image/save.js ***!
-  \**********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "C:\\MAMP\\htdocs\\timwuweb\\wp-content\\plugins\\tw-blocks\\src\\blocks\\image\\save.js";
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-
-var Save =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(Save, _Component);
-
-  function Save() {
-    _classCallCheck(this, Save);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(Save).apply(this, arguments));
-  }
-
-  _createClass(Save, [{
-    key: "render",
-    value: function render() {
-      var attributes = this.props.attributes;
-      var url = attributes.url,
-          alt = attributes.alt,
-          id = attributes.id,
-          imgFull = attributes.imgFull,
-          height = attributes.height;
-      var fullImageClass = imgFull ? 'img-100' : '';
-      var heightClass = height ? height : null;
-      return wp.element.createElement("div", {
-        className: "tw-image ".concat(fullImageClass, " ").concat(heightClass),
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 13
-        },
-        __self: this
-      }, wp.element.createElement("img", {
-        src: url,
-        alt: alt,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 14
-        },
-        __self: this
-      }));
-    }
-  }]);
-
-  return Save;
-}(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-/* harmony default export */ __webpack_exports__["default"] = (Save);
-
-/***/ }),
-
-/***/ "./src/blocks/image/style.editor.scss":
-/*!********************************************!*\
-  !*** ./src/blocks/image/style.editor.scss ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ "./src/blocks/reset.scss":
-/*!*******************************!*\
-  !*** ./src/blocks/reset.scss ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ "./src/blocks/text/edit.js":
-/*!*********************************!*\
-  !*** ./src/blocks/text/edit.js ***!
-  \*********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/editor */ "@wordpress/editor");
-/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _hoc_spacing_controls__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../hoc/spacing-controls */ "./src/hoc/spacing-controls/index.js");
-var _jsxFileName = "C:\\MAMP\\htdocs\\timwuweb\\wp-content\\plugins\\tw-blocks\\src\\blocks\\text\\edit.js";
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-
-
-
-
-
-var Edit =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(Edit, _Component);
-
-  function Edit() {
-    var _getPrototypeOf2;
-
-    var _this;
-
-    _classCallCheck(this, Edit);
-
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Edit)).call.apply(_getPrototypeOf2, [this].concat(args)));
-
-    _defineProperty(_assertThisInitialized(_this), "onChangeText", function (text) {
-      _this.props.setAttributes({
-        text: text
-      });
-    });
-
-    return _this;
-  }
-
-  _createClass(Edit, [{
-    key: "render",
-    value: function render() {
-      var attributes = this.props.attributes;
-      var text = attributes.text;
-      return wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__["BlockControls"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 20
-        },
-        __self: this
-      }, wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__["AlignmentToolbar"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 21
-        },
-        __self: this
-      })), wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"], {
-        tagName: "p",
-        onChange: this.onChangeText,
-        value: text,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 25
-        },
-        __self: this
-      }));
-    }
-  }]);
-
-  return Edit;
-}(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-/* harmony default export */ __webpack_exports__["default"] = (Edit);
-
-/***/ }),
-
-/***/ "./src/blocks/text/index.js":
-/*!**********************************!*\
-  !*** ./src/blocks/text/index.js ***!
+  !*** ./src/blocks/test/index.js ***!
   \**********************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -2051,398 +758,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _style_editor_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.editor.scss */ "./src/blocks/text/style.editor.scss");
-/* harmony import */ var _style_editor_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_style_editor_scss__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit */ "./src/blocks/text/edit.js");
-/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./save */ "./src/blocks/text/save.js");
+var _jsxFileName = "D:\\dev\\vagrant\\VVV3\\www\\gutenbergacf\\public_html\\wp-content\\plugins\\tw-blocks\\src\\blocks\\test\\index.js";
 
 
-
-
-
-var attributes = {
-  text: {
-    type: 'string',
-    source: 'html',
-    selector: 'p'
-  }
-};
-Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])('tw-blocks/text', {
-  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('TW Text Block', 'tw-blocks'),
-  description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('new version of text block', 'tw-blocks'),
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("tw-blocks/test", {
+  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Test Block", 'tw-blocks'),
+  description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Blocks to test HOCS", "tw-blocks"),
   category: 'tw-blocks-category',
-  icon: 'dashicon-text-page',
-  keywords: [Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('text', 'tw-blocks'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('text editor', 'tw-blocks')],
-  attributes: attributes,
-  edit: _edit__WEBPACK_IMPORTED_MODULE_3__["default"],
-  save: _save__WEBPACK_IMPORTED_MODULE_4__["default"]
-});
-
-/***/ }),
-
-/***/ "./src/blocks/text/save.js":
-/*!*********************************!*\
-  !*** ./src/blocks/text/save.js ***!
-  \*********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/editor */ "@wordpress/editor");
-/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "C:\\MAMP\\htdocs\\timwuweb\\wp-content\\plugins\\tw-blocks\\src\\blocks\\text\\save.js";
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-
-
-
-var Save =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(Save, _Component);
-
-  function Save() {
-    _classCallCheck(this, Save);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(Save).apply(this, arguments));
-  }
-
-  _createClass(Save, [{
-    key: "render",
-    value: function render() {
-      var attributes = this.props.attributes;
-      var text = attributes.text;
-      return wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"].Content, {
-        tagName: "p",
-        value: text,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 15
-        },
-        __self: this
-      }));
-    }
-  }]);
-
-  return Save;
-}(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-/* harmony default export */ __webpack_exports__["default"] = (Save);
-
-/***/ }),
-
-/***/ "./src/blocks/text/style.editor.scss":
-/*!*******************************************!*\
-  !*** ./src/blocks/text/style.editor.scss ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ "./src/blocks/title/edit.js":
-/*!**********************************!*\
-  !*** ./src/blocks/title/edit.js ***!
-  \**********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/editor */ "@wordpress/editor");
-/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "C:\\MAMP\\htdocs\\timwuweb\\wp-content\\plugins\\tw-blocks\\src\\blocks\\title\\edit.js";
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-
-
-
-
-var Edit =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(Edit, _Component);
-
-  function Edit() {
-    var _getPrototypeOf2;
-
-    var _this;
-
-    _classCallCheck(this, Edit);
-
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Edit)).call.apply(_getPrototypeOf2, [this].concat(args)));
-
-    _defineProperty(_assertThisInitialized(_this), "onChangeText", function (text) {
-      _this.props.setAttributes({
-        text: text
-      });
-    });
-
-    return _this;
-  }
-
-  _createClass(Edit, [{
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      var attributes = this.props.attributes;
-      var text = attributes.text,
-          heading = attributes.heading;
-      var headingOptions = [{
-        label: 'Heading 1',
-        value: 'h1'
-      }, {
-        label: 'Heading 2',
-        value: 'h2'
-      }, {
-        label: 'Heading 3',
-        value: 'h3'
-      }, {
-        label: 'Heading 4',
-        value: 'h4'
-      }, {
-        label: 'Heading 5',
-        value: 'h5'
-      }, {
-        label: 'Heading 6',
-        value: 'h6'
-      }];
-      return wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__["InspectorControls"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 27
-        },
-        __self: this
-      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["PanelBody"], {
-        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Select Heading Type', 'tw-blocks'),
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 28
-        },
-        __self: this
-      }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["SelectControl"], {
-        label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Choose Heading'),
-        value: heading,
-        options: headingOptions,
-        onChange: function onChange(heading) {
-          return _this2.props.setAttributes({
-            heading: heading
-          });
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 31
-        },
-        __self: this
-      }))), wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"], {
-        tagName: heading,
-        className: "tw-heading",
-        value: text,
-        onChange: this.onChangeText,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 39
-        },
-        __self: this
-      }));
-    }
-  }]);
-
-  return Edit;
-}(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-/* harmony default export */ __webpack_exports__["default"] = (Edit);
-
-/***/ }),
-
-/***/ "./src/blocks/title/index.js":
-/*!***********************************!*\
-  !*** ./src/blocks/title/index.js ***!
-  \***********************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _style_editor_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.editor.scss */ "./src/blocks/title/style.editor.scss");
-/* harmony import */ var _style_editor_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_editor_scss__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
-/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit */ "./src/blocks/title/edit.js");
-/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./save */ "./src/blocks/title/save.js");
-
-
-
-
-
-var attributes = {
-  text: {
-    type: 'string',
-    source: 'html',
-    selector: '.tw-heading'
+  edit: function edit(props) {
+    console.log(props.attributes);
+    return wp.element.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      },
+      __self: this
+    }, "Test");
   },
-  heading: {
-    type: 'string',
-    default: 'h3'
+  save: function save(props) {
+    return wp.element.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      },
+      __self: this
+    }, "Test");
   }
-};
-Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('tw-blocks/title', {
-  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('TW Title', 'tw-blocks'),
-  category: 'tw-blocks-category',
-  description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('Blocks for titles and heading', 'tw-blocks'),
-  keywords: [Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('title', 'tw-blocks'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('heading', 'tw-blocks'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__["__"])('text', 'tw-blocks')],
-  attributes: attributes,
-  edit: _edit__WEBPACK_IMPORTED_MODULE_3__["default"],
-  save: _save__WEBPACK_IMPORTED_MODULE_4__["default"]
 });
-
-/***/ }),
-
-/***/ "./src/blocks/title/save.js":
-/*!**********************************!*\
-  !*** ./src/blocks/title/save.js ***!
-  \**********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/editor */ "@wordpress/editor");
-/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "C:\\MAMP\\htdocs\\timwuweb\\wp-content\\plugins\\tw-blocks\\src\\blocks\\title\\save.js";
-
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-
-
-var Save =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(Save, _Component);
-
-  function Save() {
-    _classCallCheck(this, Save);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(Save).apply(this, arguments));
-  }
-
-  _createClass(Save, [{
-    key: "render",
-    value: function render() {
-      var attributes = this.props.attributes;
-      var text = attributes.text,
-          heading = attributes.heading;
-      return wp.element.createElement(wp.element.Fragment, null, wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__["RichText"].Content, {
-        tagName: heading,
-        className: "tw-heading",
-        value: text,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 14
-        },
-        __self: this
-      }));
-    }
-  }]);
-
-  return Save;
-}(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-/* harmony default export */ __webpack_exports__["default"] = (Save);
-
-/***/ }),
-
-/***/ "./src/blocks/title/style.editor.scss":
-/*!********************************************!*\
-  !*** ./src/blocks/title/style.editor.scss ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -2457,27 +799,8 @@ function (_Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var font_awesome_css_font_awesome_min_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! font-awesome/css/font-awesome.min.css */ "./node_modules/font-awesome/css/font-awesome.min.css");
 /* harmony import */ var font_awesome_css_font_awesome_min_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(font_awesome_css_font_awesome_min_css__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _blocks_reset_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blocks/reset.scss */ "./src/blocks/reset.scss");
-/* harmony import */ var _blocks_reset_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_blocks_reset_scss__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _animate_style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./animate/style.scss */ "./src/animate/style.scss");
-/* harmony import */ var _animate_style_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_animate_style_scss__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _animate_script_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./animate/script.js */ "./src/animate/script.js");
-/* harmony import */ var _animate_script_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_animate_script_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _hoc_spacing_controls__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./hoc/spacing-controls */ "./src/hoc/spacing-controls/index.js");
-/* harmony import */ var _blocks_grid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./blocks/grid */ "./src/blocks/grid/index.js");
-/* harmony import */ var _blocks_text__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./blocks/text */ "./src/blocks/text/index.js");
-/* harmony import */ var _blocks_button__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./blocks/button */ "./src/blocks/button/index.js");
-/* harmony import */ var _blocks_title__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./blocks/title */ "./src/blocks/title/index.js");
-/* harmony import */ var _blocks_image__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./blocks/image */ "./src/blocks/image/index.js");
-/* harmony import */ var _blocks_flexible_content__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./blocks/flexible-content */ "./src/blocks/flexible-content/index.js");
-
-
-
-
-
-
-
-
+/* harmony import */ var _hoc_spacing_controls__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./hoc/spacing-controls */ "./src/hoc/spacing-controls/index.js");
+/* harmony import */ var _blocks_test__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blocks/test */ "./src/blocks/test/index.js");
 
 
 
@@ -2493,19 +816,17 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var lodash_assign__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash.assign */ "./node_modules/lodash.assign/index.js");
-/* harmony import */ var lodash_assign__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_assign__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/hooks */ "@wordpress/hooks");
-/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_hooks__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var lodash_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash.assign */ "./node_modules/lodash.assign/index.js");
+/* harmony import */ var lodash_assign__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_assign__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/hooks */ "@wordpress/hooks");
+/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_hooks__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/editor */ "@wordpress/editor");
+/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _wordpress_compose__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/compose */ "@wordpress/compose");
 /* harmony import */ var _wordpress_compose__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/editor */ "@wordpress/editor");
-/* harmony import */ var _wordpress_editor__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_editor__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__);
-var _jsxFileName = "C:\\MAMP\\htdocs\\timwuweb\\wp-content\\plugins\\tw-blocks\\src\\hoc\\spacing-controls\\index.js";
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__);
+var _jsxFileName = "D:\\dev\\vagrant\\VVV3\\www\\gutenbergacf\\public_html\\wp-content\\plugins\\tw-blocks\\src\\hoc\\spacing-controls\\index.js";
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
@@ -2514,41 +835,31 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 
 
- // Enable style controls on the following blocks
+var __ = wp.i18n.__; // Disable spacing control on the following blocks
 
-var enableStyleControlOnBlocks = ['tw-blocks/text', 'tw-blocks/title', 'tw-blocks/image', 'tw-blocks/flexible-content', 'tw-blocks/grid', 'core/columns', 'core/group']; //Available options
+var disableSpacingControlOnBlocks = ['core/image']; // Available spacing control options
 
-var containerControlOptions = [{
-  label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('None', 'tw-blocks'),
-  value: ''
-}, {
-  label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Container', 'tw-blocks'),
-  value: 'container'
-}, {
-  label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Container Fluid', 'tw-blocks'),
-  value: 'container-fluid'
-}];
 var spacingControlOptions = [{
-  label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('None', 'tw-blocks'),
+  label: __('None', 'tw-blocks'),
   value: 0
 }, {
-  label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Extra Small', 'tw-blocks'),
+  label: __('Extra Small', 'tw-blocks'),
   value: 1
 }, {
-  label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Small', 'tw-blocks'),
+  label: __('Small', 'tw-blocks'),
   value: 2
 }, {
-  label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Medium', 'tw-blocks'),
+  label: __('Medium', 'tw-blocks'),
   value: 3
 }, {
-  label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Large', 'tw-blocks'),
+  label: __('Large', 'tw-blocks'),
   value: 4
 }, {
-  label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Extra Large', 'tw-blocks'),
+  label: __('Extra Large', 'tw-blocks'),
   value: 5
 }];
 /**
- * Add style control attribute to block.
+ * Add spacing control attribute to block.
  *
  * @param {object} settings Current block settings.
  * @param {string} name Name of block.
@@ -2556,14 +867,14 @@ var spacingControlOptions = [{
  * @returns {object} Modified block settings.
  */
 
-var addStyleControlAttribute = function addStyleControlAttribute(settings, name) {
-  // Do nothing if it's another block than our defined ones
-  if (!enableStyleControlOnBlocks.includes(name)) {
+var addSpacingControlAttribute = function addSpacingControlAttribute(settings, name) {
+  // Do nothing if it's another block than our defined ones.
+  if (disableSpacingControlOnBlocks.includes(name)) {
     return settings;
   } // Use Lodash's assign to gracefully handle if attributes are undefined
 
 
-  settings.attributes = lodash_assign__WEBPACK_IMPORTED_MODULE_1___default()(settings.attributes, {
+  settings.attributes = lodash_assign__WEBPACK_IMPORTED_MODULE_0___default()(settings.attributes, {
     paddingTop: {
       type: 'number',
       default: spacingControlOptions[0].value
@@ -2595,20 +906,12 @@ var addStyleControlAttribute = function addStyleControlAttribute(settings, name)
     marginRight: {
       type: 'number',
       default: spacingControlOptions[0].value
-    },
-    container: {
-      type: 'string',
-      default: containerControlOptions[0].value
-    },
-    id: {
-      type: 'string',
-      default: ''
     }
   });
   return settings;
 };
 
-Object(_wordpress_hooks__WEBPACK_IMPORTED_MODULE_2__["addFilter"])('blocks.registerBlockType', 'tw-blocks/attribute/style', addStyleControlAttribute);
+Object(_wordpress_hooks__WEBPACK_IMPORTED_MODULE_1__["addFilter"])('blocks.registerBlockType', 'extend-block-example/attribute/spacing', addSpacingControlAttribute);
 /**
  * Create HOC to add style control to inspector controls of block.
  */
@@ -2616,11 +919,11 @@ Object(_wordpress_hooks__WEBPACK_IMPORTED_MODULE_2__["addFilter"])('blocks.regis
 var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["createHigherOrderComponent"])(function (BlockEdit) {
   return function (props) {
     // Do nothing if it's another block than our defined ones.
-    if (!enableStyleControlOnBlocks.includes(props.name)) {
+    if (disableSpacingControlOnBlocks.includes(props.name)) {
       return wp.element.createElement(BlockEdit, _extends({}, props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 141
+          lineNumber: 107
         },
         __self: this
       }));
@@ -2677,88 +980,36 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       return classes.join(' ');
     };
 
-    console.log(spacingClasses()); // const spacingClasses = `pt-${ paddingTop } pb-${ paddingBottom } pl-${ paddingLeft } pr-${ paddingRight} mt-${ marginTop } mb-${ marginBottom } ml-${ marginLeft } mr-${ marginRight}`;
-
-    var containerClass = "".concat(container);
     var parentWrapperClasses = [spacingClasses()].join(' ');
     return wp.element.createElement(wp.element.Fragment, null, wp.element.createElement("div", {
-      id: id,
       className: parentWrapperClasses,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 192
-      },
-      __self: this
-    }, wp.element.createElement("div", {
-      className: containerClass,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 193
+        lineNumber: 155
       },
       __self: this
     }, wp.element.createElement(BlockEdit, _extends({}, props, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 194
+        lineNumber: 156
       },
       __self: this
-    })))), wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_4__["InspectorControls"], {
+    }))), wp.element.createElement(_wordpress_editor__WEBPACK_IMPORTED_MODULE_2__["InspectorControls"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 197
+        lineNumber: 158
       },
       __self: this
-    }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["PanelBody"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 198
-      },
-      __self: this
-    }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["TextControl"], {
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('ID'),
-      value: id,
-      onChange: function onChange(id) {
-        props.setAttributes({
-          id: id
-        });
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 199
-      },
-      __self: this
-    })), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["PanelBody"], {
-      title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Container Control'),
+    }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["PanelBody"], {
+      title: __('Control Padding'),
       initialOpen: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 209
+        lineNumber: 159
       },
       __self: this
-    }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Container Type'),
-      value: container,
-      options: containerControlOptions,
-      onChange: function onChange(selectedContainerOption) {
-        props.setAttributes({
-          container: selectedContainerOption
-        });
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 213
-      },
-      __self: this
-    })), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["PanelBody"], {
-      title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Control Padding'),
-      initialOpen: true,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 224
-      },
-      __self: this
-    }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Padding Top'),
+    }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["SelectControl"], {
+      label: __('Padding Top'),
       value: paddingTop,
       options: spacingControlOptions,
       onChange: function onChange(selectedSpacingOption) {
@@ -2768,11 +1019,11 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 228
+        lineNumber: 163
       },
       __self: this
-    }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Padding Bottom'),
+    }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["SelectControl"], {
+      label: __('Padding Bottom'),
       value: paddingBottom,
       options: spacingControlOptions,
       onChange: function onChange(selectedSpacingOption) {
@@ -2782,11 +1033,11 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 238
+        lineNumber: 173
       },
       __self: this
-    }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Padding Left'),
+    }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["SelectControl"], {
+      label: __('Padding Left'),
       value: paddingLeft,
       options: spacingControlOptions,
       onChange: function onChange(selectedSpacingOption) {
@@ -2796,11 +1047,11 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 248
+        lineNumber: 183
       },
       __self: this
-    }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Padding Right'),
+    }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["SelectControl"], {
+      label: __('Padding Right'),
       value: paddingRight,
       options: spacingControlOptions,
       onChange: function onChange(selectedSpacingOption) {
@@ -2810,19 +1061,19 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 258
+        lineNumber: 193
       },
       __self: this
-    })), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["PanelBody"], {
-      title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Control Margin'),
+    })), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["PanelBody"], {
+      title: __('Control Margin'),
       initialOpen: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 269
+        lineNumber: 204
       },
       __self: this
-    }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Margin Top'),
+    }, wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["SelectControl"], {
+      label: __('Margin Top'),
       value: marginTop,
       options: spacingControlOptions,
       onChange: function onChange(selectedSpacingOption) {
@@ -2832,11 +1083,11 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 273
+        lineNumber: 208
       },
       __self: this
-    }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Margin Bottom'),
+    }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["SelectControl"], {
+      label: __('Margin Bottom'),
       value: marginBottom,
       options: spacingControlOptions,
       onChange: function onChange(selectedSpacingOption) {
@@ -2846,11 +1097,11 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 283
+        lineNumber: 218
       },
       __self: this
-    }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Margin Left'),
+    }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["SelectControl"], {
+      label: __('Margin Left'),
       value: marginLeft,
       options: spacingControlOptions,
       onChange: function onChange(selectedSpacingOption) {
@@ -2860,11 +1111,11 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 293
+        lineNumber: 228
       },
       __self: this
-    }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__["SelectControl"], {
-      label: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__["__"])('Margin Right'),
+    }), wp.element.createElement(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["SelectControl"], {
+      label: __('Margin Right'),
       value: marginRight,
       options: spacingControlOptions,
       onChange: function onChange(selectedSpacingOption) {
@@ -2874,102 +1125,13 @@ var withStyleControl = Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["c
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 303
+        lineNumber: 238
       },
       __self: this
     }))));
   };
 }, 'withStyleControl');
-Object(_wordpress_hooks__WEBPACK_IMPORTED_MODULE_2__["addFilter"])('editor.BlockEdit', 'tw-blocks/with-style-control', withStyleControl);
-/**
- * Add margin style attribute to save element of block.
- *
- * @param {object} saveElementProps Props of save element.
- * @param {Object} blockType Block type information.
- * @param {Object} attributes Attributes of block.
- *
- * @returns {object} Modified props of save element.
- */
-
-function saveStyle(element, blockType, attributes) {
-  console.log(element);
-
-  if (!enableStyleControlOnBlocks.includes(blockType.name)) {
-    return element;
-  }
-
-  console.log(blockType);
-  var paddingBottom = attributes.paddingBottom,
-      paddingLeft = attributes.paddingLeft,
-      paddingRight = attributes.paddingRight,
-      paddingTop = attributes.paddingTop,
-      marginBottom = attributes.marginBottom,
-      marginLeft = attributes.marginLeft,
-      marginRight = attributes.marginRight,
-      marginTop = attributes.marginTop,
-      container = attributes.container,
-      id = attributes.id;
-
-  var spacingClasses = function spacingClasses() {
-    var classes = [];
-
-    if (paddingTop !== null && paddingTop !== 0) {
-      classes.push("pt-".concat(paddingTop));
-    }
-
-    if (paddingBottom !== null && paddingBottom !== 0) {
-      classes.push("pb-".concat(paddingBottom));
-    }
-
-    if (paddingLeft !== null && paddingLeft !== 0) {
-      classes.push("pl-".concat(paddingLeft));
-    }
-
-    if (paddingRight !== null && paddingRight !== 0) {
-      classes.push("pr-".concat(paddingRight));
-    }
-
-    if (marginTop !== null && marginTop !== 0) {
-      classes.push("pt-".concat(marginTop));
-    }
-
-    if (marginBottom !== null && marginBottom !== 0) {
-      classes.push("pb-".concat(marginBottom));
-    }
-
-    if (marginLeft !== null && marginLeft !== 0) {
-      classes.push("pl-".concat(marginLeft));
-    }
-
-    if (marginRight !== null && marginRight !== 0) {
-      classes.push("pr-".concat(marginRight));
-    }
-
-    console.log(classes);
-    return classes.join(' ');
-  };
-
-  var containerClass = "".concat(container);
-  var parentWrapperClasses = [spacingClasses()].join(' ');
-  return wp.element.createElement("div", {
-    id: id,
-    className: parentWrapperClasses,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 387
-    },
-    __self: this
-  }, wp.element.createElement("div", {
-    className: containerClass,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 388
-    },
-    __self: this
-  }, element));
-}
-
-Object(_wordpress_hooks__WEBPACK_IMPORTED_MODULE_2__["addFilter"])('blocks.getSaveElement', 'tw-blocks/get-save-content/save-style', saveStyle);
+Object(_wordpress_hooks__WEBPACK_IMPORTED_MODULE_1__["addFilter"])('editor.BlockEdit', 'tw-blocks/with-style-control', withStyleControl);
 
 /***/ }),
 
@@ -3006,17 +1168,6 @@ module.exports = wp["compose"];
 
 /***/ }),
 
-/***/ "@wordpress/data":
-/*!******************************!*\
-  !*** external ["wp","data"] ***!
-  \******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = wp["data"];
-
-/***/ }),
-
 /***/ "@wordpress/editor":
 /*!********************************!*\
   !*** external ["wp","editor"] ***!
@@ -3025,17 +1176,6 @@ module.exports = wp["data"];
 /***/ (function(module, exports) {
 
 module.exports = wp["editor"];
-
-/***/ }),
-
-/***/ "@wordpress/element":
-/*!*********************************!*\
-  !*** external ["wp","element"] ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = wp["element"];
 
 /***/ }),
 

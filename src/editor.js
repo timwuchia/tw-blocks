@@ -1,11 +1,4 @@
 import 'font-awesome/css/font-awesome.min.css';
-import './blocks/reset.scss';
-import "./animate/style.scss";
-import "./animate/script.js"; 
 import './hoc/spacing-controls';
-import './blocks/grid';
-import './blocks/text';
-import './blocks/button';
-import './blocks/title';
-import './blocks/image';
-import './blocks/flexible-content';
+
+import './blocks/test';
